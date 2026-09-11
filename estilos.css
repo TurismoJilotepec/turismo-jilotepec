@@ -58,7 +58,6 @@ body {
   text-decoration: none;
 }
 
-/* ESTILO DE LOGOS SIN MARCO NI FONDO BLANCO */
 .header-logo {
   height: 55px;
   width: auto;
@@ -117,14 +116,14 @@ body {
   gap: 1.2rem;
 }
 
-/* HERO / PORTADA CON LAS PEÑAS EN COLORES NATURALES */
+/* HERO / PORTADA */
 .hero {
   position: relative;
   background-image: url('img/fondo.jpg');
   background-size: cover;
   background-position: center;
-  height: 82vh;
-  min-height: 520px;
+  height: 85vh;
+  min-height: 540px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,11 +131,10 @@ body {
   text-align: center;
 }
 
-/* Sombreado sutil y natural sobre la montaña (sin tinte rojo excesivo) */
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
 
 .hero-content {
@@ -144,16 +142,21 @@ body {
   z-index: 2;
 }
 
-/* Glifo de Jilotepec */
+/* LOGO PUEBLO MÁGICO EN EL CENTRO DE LA PORTADA */
 .hero-badge {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
-.glifo-hero {
-  height: 105px;
+.hero-pm-logo {
+  height: 150px;
   width: auto;
-  border-radius: 50%;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  object-fit: contain;
+  filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.7));
+  transition: transform 0.3s ease;
+}
+
+.hero-pm-logo:hover {
+  transform: scale(1.05);
 }
 
 .hero h1 {
@@ -161,7 +164,7 @@ body {
   font-size: 3.4rem;
   font-weight: 900;
   text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.8);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero p {
@@ -400,7 +403,7 @@ body {
   color: var(--dorado-acento);
 }
 
-/* BANNER DE LOGOS SIN MARCO NI CAJAS BLANCAS */
+/* BANNER DE LOGOS EN FOOTER */
 .footer-brand-banner {
   background-color: var(--blanco);
   padding: 2.2rem 0;
@@ -427,11 +430,6 @@ body {
 
 .banner-logo:hover {
   transform: scale(1.08);
-}
-
-.logo-round {
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .footer-bottom {
@@ -472,5 +470,8 @@ body {
   }
   .hero h1 {
     font-size: 2.4rem;
+  }
+  .hero-pm-logo {
+    height: 110px;
   }
 }
