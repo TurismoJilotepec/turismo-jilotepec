@@ -7,31 +7,24 @@
   <link rel="stylesheet" href="estilos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- BARRA SUPERIOR CON LOGOS OFICIALES -->
-  <div class="top-bar">
-    <div class="container top-bar-flex">
-      <div class="logos-oficiales">
-        <img src="img/logo-gobierno.jpg" alt="H. Ayuntamiento Jilotepec 2025-2027" class="logo-top dark-bg">
-        <img src="img/logo-municipio.jpg" alt="Municipio de Jilotepec" class="logo-top">
-      </div>
-      <div class="logos-turismo">
-        <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="logo-top">
-        <img src="img/logo-mexico.png" alt="Visita México" class="logo-top">
-      </div>
-    </div>
-  </div>
-
-  <!-- NAVEGACIÓN / MENÚ PRINCIPAL -->
+  <!-- ENCABEZADO PRINCIPAL Y NAVEGACIÓN -->
   <header class="header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo-brand">
-        <span class="brand-title">JILOTEPEC</span>
-        <span class="brand-sub">DIRECCIÓN DE TURISMO</span>
-      </a>
+    <div class="container header-container">
+      
+      <!-- Logo Gobierno e Identidad -->
+      <div class="brand-box">
+        <img src="img/logo-gobierno.jpg" alt="Gobierno Jilotepec" class="header-logo">
+        <div class="brand-text">
+          <span class="brand-title">JILOTEPEC</span>
+          <span class="brand-sub">PUEBLO MÁGICO • TURISMO</span>
+        </div>
+      </div>
+
+      <!-- Menú de Navegación -->
       <nav class="nav-menu">
         <a href="index.html" class="nav-link active">Inicio</a>
         <a href="atractivos.html" class="nav-link">Atractivos</a>
@@ -39,15 +32,29 @@
         <a href="gastronomia.html" class="nav-link">Gastronomía</a>
         <a href="contacto.html" class="nav-link">Contacto</a>
       </nav>
+
+      <!-- Logos Turismo en Grande -->
+      <div class="header-turismo-logos">
+        <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="header-logo logo-pm">
+        <img src="img/logo-mexico.png" alt="Visita México" class="header-logo logo-mx">
+      </div>
+
     </div>
   </header>
 
-  <!-- SECCIÓN HERO / BIENVENIDA -->
+  <!-- HERO / PORTADA (FONDO: img/fondo.jpg DE LAS PEÑAS DE JILOTEPEC) -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content container">
+      
+      <!-- Emblem / Glifo Municipal en grande sobre las Peñas -->
+      <div class="hero-badge">
+        <img src="img/logo-municipio.jpg" alt="Glifo Jilotepec" class="glifo-hero">
+      </div>
+
       <h1>Descubre la Magia de Jilotepec</h1>
       <p>Naturaleza, historia, tradición y riqueza cultural en el corazón del Estado de México.</p>
+      
       <div class="hero-buttons">
         <a href="atractivos.html" class="btn btn-primary">Explorar Atractivos</a>
         <a href="#mapa" class="btn btn-secondary">¿Cómo llegar?</a>
@@ -55,13 +62,14 @@
     </div>
   </section>
 
-  <!-- BIENVENIDA CON GLIFO MUNICIPAL -->
+  <!-- BIENVENIDA INSTITUCIONAL -->
   <section class="seccion container">
     <div class="bienvenida-grid">
       <div class="bienvenida-texto">
+        <span class="badge-tag">H. Ayuntamiento 2025 - 2027</span>
         <h2>Bienvenido a Jilotepec de Molina Enríquez</h2>
-        <p class="destacado">Desarrollo en Armonía | Tierra de Maíz y Tradición</p>
-        <p>Jilotepec se distingue por su arquitectura colonial, sus imponentes formaciones rocosas como Las Peñas de Dexcani, sus parques ecológicos y festividades llenas de color y sabor.</p>
+        <p class="destacado">Desarrollo en Armonía | Tierra de Maíz, Cultura y Aventura</p>
+        <p>Jilotepec se distingue por su majestuosa naturaleza, el Parque Ecoturístico Las Peñas de Dexcani, sus templos históricos, exquisita gastronomía y tradiciones festivas que acogen con calidez a todos sus visitantes.</p>
       </div>
       <div class="bienvenida-imagen">
         <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80" alt="Jilotepec Naturaleza">
@@ -69,17 +77,17 @@
     </div>
   </section>
 
-  <!-- TARJETAS DE SECCIONES -->
+  <!-- SECCIONES DESTACADAS -->
   <section class="seccion bg-gris">
     <div class="container">
-      <h2 class="titulo-seccion">Conoce lo que Jilotepec tiene para ti</h2>
+      <h2 class="titulo-seccion">Lo Mejor de Nuestro Municipio</h2>
       <div class="cards-grid">
         
         <article class="card">
           <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Atractivos Turísticos">
           <div class="card-body">
             <h3>Atractivos Turísticos</h3>
-            <p>Desde el Santuario del Señor del Huerto hasta el Parque Ecoturístico Las Peñas.</p>
+            <p>Las Peñas de Dexcani, el Santuario del Señor del Huerto, la Parroquia de San Pedro y parques naturales.</p>
             <a href="atractivos.html" class="card-link">Ver sitios turísticos &rarr;</a>
           </div>
         </article>
@@ -88,7 +96,7 @@
           <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Eventos y Ferias">
           <div class="card-body">
             <h3>Eventos y Ferias</h3>
-            <p>Celebra la Feria del Maíz, el Grito de Independencia y festividades tradicionales.</p>
+            <p>Feria Regional del Maíz, Fiestas Patrias, Convocatoria Reina Turismo y celebraciones patronales.</p>
             <a href="eventos.html" class="card-link">Consultar cartelera &rarr;</a>
           </div>
         </article>
@@ -97,7 +105,7 @@
           <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="Gastronomía">
           <div class="card-body">
             <h3>Gastronomía Local</h3>
-            <p>Sabor tradicional: barbacoa, platillos a base de maíz, pulque y repostería artesanal.</p>
+            <p>Sabor auténtico: barbacoa de borrego, consomé, ximbó, platillos de maíz y pulque artesanal.</p>
             <a href="gastronomia.html" class="card-link">Descubrir sabores &rarr;</a>
           </div>
         </article>
@@ -109,7 +117,7 @@
   <!-- MAPA Y UBICACIÓN -->
   <section id="mapa" class="seccion container">
     <h2 class="titulo-seccion">Ubicación y Cómo Llegar</h2>
-    <p class="subtitulo-seccion">Jilotepec se ubica al norte del Estado de México, a tan solo 1 hora y 20 minutos de la Ciudad de México.</p>
+    <p class="subtitulo-seccion">Jilotepec está ubicado estratégicamente en el norte del Estado de México, a 1 h 20 min de la CDMX.</p>
     <div class="mapa-wrapper">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30009.601550275815!2d-99.54924744216792!3d19.9538356391458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d233e721d7b325%3A0xa1936c2e3dd7db8!2sJilotepec%20de%20Molina%20Enr%C3%ADquez%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" 
@@ -123,18 +131,19 @@
     </div>
   </section>
 
-  <!-- PIE DE PÁGINA / FOOTER INSTITUCIONAL -->
+  <!-- PIE DE PÁGINA INSTITUCIONAL -->
   <footer class="footer">
     <div class="container footer-grid">
       
       <div class="footer-col">
+        <img src="img/logo-gobierno.jpg" alt="Gobierno Jilotepec" class="footer-logo">
         <h3>Turismo Jilotepec</h3>
-        <p>H. Ayuntamiento Constitucional de Jilotepec 2025-2027.</p>
-        <p><em>"Desarrollo en Armonía"</em></p>
+        <p>H. Ayuntamiento Constitucional de Jilotepec 2025 - 2027</p>
+        <p class="slogan-footer">"Desarrollo en Armonía"</p>
       </div>
 
       <div class="footer-col">
-        <h4>Enlaces Rápidos</h4>
+        <h4>Navegación</h4>
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="atractivos.html">Atractivos Turísticos</a></li>
@@ -145,21 +154,20 @@
       </div>
 
       <div class="footer-col">
-        <h4>Contacto y Atención</h4>
-        <p><strong>Dirección:</strong> Palacio Municipal s/n, Centro, Jilotepec, Edo. de México.</p>
+        <h4>Contacto de Atención</h4>
+        <p><strong>Dirección:</strong> Palacio Municipal s/n, Centro, Jilotepec, Estado de México.</p>
         <p><strong>Teléfono:</strong> (761) 734 0000</p>
         <p><strong>Correo:</strong> turismo@jilotepec.gob.mx</p>
       </div>
 
     </div>
 
-    <!-- MUESTRA DE LOGOS INSTITUCIONALES EN EL FOOTER -->
-    <div class="footer-brand-bar">
+    <!-- BANNER DE LOGOS INSTITUCIONALES EN GRANDE Y VISTOSOS -->
+    <div class="footer-brand-banner">
       <div class="container footer-brand-flex">
-        <img src="img/logo-gobierno.jpg" alt="Gobierno Jilotepec">
-        <img src="img/logo-municipio.jpg" alt="Municipio Jilotepec">
-        <img src="img/logo-pueblo-magico.png" alt="Pueblo Mágico">
-        <img src="img/logo-mexico.png" alt="México">
+        <img src="img/logo-pueblo-magico.png" alt="Pueblo Mágico Jilotepec" class="banner-logo">
+        <img src="img/logo-municipio.jpg" alt="Municipio Jilotepec" class="banner-logo logo-round">
+        <img src="img/logo-mexico.png" alt="Visita México" class="banner-logo">
       </div>
     </div>
 

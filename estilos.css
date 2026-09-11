@@ -1,33 +1,73 @@
-/* BARRA SUPERIOR DE LOGOS OFICIALES */
-.top-bar {
-  background-color: #ffffff;
-  border-bottom: 2px solid #e2e8f0;
-  padding: 0.6rem 0;
+/* VARIABLES DE COLOR INSTITUCIONALES (ROJO BANDERA PRINCIPAL Y VERDE COMPLEMENTARIO) */
+:root {
+  --rojo-bandera: #a6192e;       /* Rojo mexicano elegante */
+  --rojo-oscuro: #800f21;        /* Rojo borgoña profundo para footer */
+  --verde-bandera: #0f5132;      /* Verde institucional limpio */
+  --verde-claro: #198754;        /* Verde vivo de acento */
+  --dorado-acento: #d4af37;      /* Dorado formal */
+  --gris-fondo: #f8f9fa;
+  --texto-oscuro: #1c1c1c;
+  --texto-mutado: #5a6268;
+  --blanco: #ffffff;
+  --fuente-titulo: 'Playfair Display', serif;
+  --fuente-cuerpo: 'Montserrat', sans-serif;
 }
 
-.top-bar-flex {
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+  background-color: var(--blanco);
+}
+
+.container {
+  width: 92%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* HEADER / NAVEGACIÓN PRINCIPAL */
+.header {
+  background-color: var(--rojo-bandera);
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid var(--dorado-acento);
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
-.logos-oficiales, .logos-turismo {
+.brand-box {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 0.8rem;
+  text-decoration: none;
 }
 
-.logo-top {
-  height: 50px;
+.header-logo {
+  height: 60px;
   width: auto;
   object-fit: contain;
+  border-radius: 6px;
+  background-color: var(--blanco);
+  padding: 3px;
 }
 
-/* Marca del Menú Navegación */
-.logo-brand {
-  text-decoration: none;
+.brand-text {
   display: flex;
   flex-direction: column;
 }
@@ -35,23 +75,348 @@
 .brand-title {
   color: var(--blanco);
   font-family: var(--fuente-titulo);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 900;
   letter-spacing: 2px;
-  font-weight: 700;
+  line-height: 1.1;
 }
 
 .brand-sub {
   color: var(--dorado-acento);
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
-/* BANDA DE LOGOS EN EL FOOTER */
-.footer-brand-bar {
-  background-color: #ffffff;
-  padding: 1.2rem 0;
-  border-top: 3rem solid var(--verde-pueblo);
+/* MENÚ DE NAVEGACIÓN */
+.nav-menu {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-link {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--blanco);
+  background-color: var(--verde-bandera);
+  border-bottom: 2px solid var(--dorado-acento);
+}
+
+/* LOGOS EN ENCABEZADO (MÁS GRANDES Y DESTACADOS) */
+.header-turismo-logos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-pm, .logo-mx {
+  height: 55px;
+  padding: 4px 8px;
+}
+
+/* HERO / PORTADA (USANDO img/fondo.jpg DE LAS PEÑAS DE JILOTEPEC) */
+.hero {
+  position: relative;
+  background-image: url('img/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, rgba(166, 25, 46, 0.45) 0%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Glifo del maíz flotando en Hero */
+.hero-badge {
+  margin-bottom: 1rem;
+}
+
+.glifo-hero {
+  height: 110px;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 8px;
+  border-radius: 50%;
+  border: 3px solid var(--dorado-acento);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+  font-family: var(--fuente-titulo);
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 750px;
+  margin: 0 auto 2rem auto;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+  font-weight: 500;
+}
+
+/* BOTONES */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin: 0.4rem;
+}
+
+.btn-primary {
+  background-color: var(--rojo-bandera);
+  color: var(--blanco);
+  border: 2px solid var(--rojo-bandera);
+  box-shadow: 0 4px 12px rgba(166, 25, 46, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--verde-bandera);
+  border-color: var(--verde-bandera);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: var(--verde-bandera);
+  color: var(--blanco);
+  border: 2px solid var(--verde-bandera);
+  box-shadow: 0 4px 12px rgba(15, 81, 50, 0.4);
+}
+
+.btn-secondary:hover {
+  background-color: var(--rojo-bandera);
+  border-color: var(--rojo-bandera);
+  transform: translateY(-3px);
+}
+
+/* SECCIONES GENERALES */
+.seccion {
+  padding: 4.5rem 0;
+}
+
+.bg-gris {
+  background-color: var(--gris-fondo);
+}
+
+.titulo-seccion {
+  font-family: var(--fuente-titulo);
+  text-align: center;
+  font-size: 2.3rem;
+  color: var(--rojo-bandera);
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo-seccion {
+  text-align: center;
+  color: var(--texto-mutado);
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.badge-tag {
+  display: inline-block;
+  background-color: var(--verde-bandera);
+  color: var(--blanco);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* BIENVENIDA */
+.bienvenida-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.bienvenida-texto h2 {
+  font-family: var(--fuente-titulo);
+  font-size: 2.2rem;
+  color: var(--rojo-bandera);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.bienvenida-texto .destacado {
+  font-weight: 700;
+  color: var(--verde-bandera);
+  margin-bottom: 1.2rem;
+  font-size: 1.15rem;
+}
+
+.bienvenida-imagen img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 4px solid var(--blanco);
+}
+
+/* TARJETAS (CARDS) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--blanco);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--rojo-bandera);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  border-top-color: var(--verde-bandera);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.8rem;
+}
+
+.card-body h3 {
+  font-family: var(--fuente-titulo);
+  color: var(--rojo-bandera);
+  margin-bottom: 0.6rem;
+  font-size: 1.35rem;
+}
+
+.card-body p {
+  color: var(--texto-mutado);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-link {
+  color: var(--verde-bandera);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.card-link:hover {
+  color: var(--rojo-bandera);
+}
+
+/* MAPA */
+.mapa-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  border: 3px solid var(--rojo-bandera);
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--rojo-oscuro);
+  color: var(--blanco);
+  padding-top: 3.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer-logo {
+  height: 65px;
+  background-color: var(--blanco);
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.footer-col h3 {
+  font-family: var(--fuente-titulo);
+  color: var(--dorado-acento);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.slogan-footer {
+  color: var(--dorado-acento);
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.footer-col h4 {
+  color: var(--dorado-acento);
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--verde-bandera);
+  padding-bottom: 0.4rem;
+  display: inline-block;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-col a {
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: var(--dorado-acento);
+}
+
+/* BANNER DE LOGOS GRANDES EN FOOTER */
+.footer-brand-banner {
+  background-color: var(--blanco);
+  padding: 2rem 0;
+  border-top: 4px solid var(--verde-bandera);
+  border-bottom: 4px solid var(--dorado-acento);
 }
 
 .footer-brand-flex {
@@ -59,362 +424,62 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.footer-brand-flex img {
-  height: 45px;
+.banner-logo {
+  height: 80px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.3s;
 }
 
-@media (max-width: 768px) {
-  .top-bar-flex {
+.banner-logo:hover {
+  transform: scale(1.08);
+}
+
+.logo-round {
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.footer-bottom {
+  background-color: #120205;
+  padding: 1.4rem 0;
+  font-size: 0.88rem;
+  color: #cccccc;
+}
+
+.footer-bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-legal a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: var(--blanco);
+}
+
+/* RESPONSIVO MÓVIL */
+@media (max-width: 992px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-menu {
+    flex-wrap: wrap;
     justify-content: center;
   }
-  .logo-top {
-    height: 40px;
-  }
-  
-}/* VARIABLES DE COLOR E INSTITUCIONALES */
-:root {
-    --verde-pueblo: #1b4332;
-    --verde-claro: #2d6a4f;
-    --dorado-acento: #d4a373;
-    --rojo-mexicano: #bc4749;
-    --gris-fondo: #f8f9fa;
-    --texto-oscuro: #212529;
-    --texto-mutado: #6c757d;
-    --blanco: #ffffff;
-    --fuente-titulo: 'Playfair Display', serif;
-    --fuente-cuerpo: 'Montserrat', sans-serif;
-  }
-  
-  /* RESET BÁSICO */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: var(--fuente-cuerpo);
-    color: var(--texto-oscuro);
-    line-height: 1.6;
-    background-color: var(--blanco);
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* NAVEGACIÓN / HEADER */
-  .header {
-    background-color: var(--verde-pueblo);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-  }
-  
-  .logo {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .logo-titulo {
-    color: var(--blanco);
-    font-family: var(--fuente-titulo);
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    font-weight: 700;
-  }
-  
-  .logo-subtitulo {
-    color: var(--dorado-acento);
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    font-weight: 600;
-  }
-  
-  .nav-menu {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .nav-link {
-    color: var(--blanco);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-  }
-  
-  .nav-link:hover, .nav-link.active {
-    color: var(--dorado-acento);
-  }
-  
-  /* HERO / PORTADA */
-  .hero {
-    position: relative;
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    color: var(--blanco);
-    text-align: center;
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.45);
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .hero h1 {
-    font-family: var(--fuente-titulo);
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.25rem;
-    max-width: 700px;
-    margin: 0 auto 2rem auto;
-  }
-  
-  /* BOTONES */
-  .btn {
-    display: inline-block;
-    padding: 0.8rem 1.8rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin: 0.3rem;
-  }
-  
-  .btn-primary {
-    background-color: var(--dorado-acento);
-    color: var(--texto-oscuro);
-  }
-  
-  .btn-primary:hover {
-    background-color: #c39262;
-    transform: translateY(-2px);
-  }
-  
-  .btn-secondary {
-    background-color: transparent;
-    color: var(--blanco);
-    border: 2px solid var(--blanco);
-  }
-  
-  .btn-secondary:hover {
-    background-color: var(--blanco);
-    color: var(--verde-pueblo);
-  }
-  
-  /* SECCIONES Y GRILLAS */
-  .seccion {
-    padding: 4rem 0;
-  }
-  
-  .bg-gris {
-    background-color: var(--gris-fondo);
-  }
-  
-  .titulo-seccion {
-    font-family: var(--fuente-titulo);
-    text-align: center;
-    font-size: 2.2rem;
-    color: var(--verde-pueblo);
-    margin-bottom: 0.5rem;
-  }
-  
-  .subtitulo-seccion {
-    text-align: center;
-    color: var(--texto-mutado);
-    margin-bottom: 2.5rem;
-  }
-  
-  /* SECCIÓN BIENVENIDA */
   .bienvenida-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
-  
-  .bienvenida-texto h2 {
-    font-family: var(--fuente-titulo);
-    font-size: 2rem;
-    color: var(--verde-pueblo);
-    margin-bottom: 1rem;
+  .hero h1 {
+    font-size: 2.4rem;
   }
-  
-  .bienvenida-texto .destacado {
-    font-weight: 600;
-    color: var(--verde-claro);
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-  }
-  
-  .bienvenida-imagen img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-  }
-  
-  /* TARJETAS (CARDS) */
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .card {
-    background: var(--blanco);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-8px);
-  }
-  
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card-body {
-    padding: 1.5rem;
-  }
-  
-  .card-body h3 {
-    font-family: var(--fuente-titulo);
-    color: var(--verde-pueblo);
-    margin-bottom: 0.5rem;
-  }
-  
-  .card-body p {
-    color: var(--texto-mutado);
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .card-link {
-    color: var(--rojo-mexicano);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-  }
-  
-  /* MAPA */
-  .mapa-wrapper {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  
-  /* FOOTER */
-  .footer {
-    background-color: var(--verde-pueblo);
-    color: var(--blanco);
-    padding-top: 3rem;
-  }
-  
-  .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-  
-  .footer-col h3 {
-    font-family: var(--fuente-titulo);
-    color: var(--dorado-acento);
-    margin-bottom: 1rem;
-  }
-  
-  .footer-col h4 {
-    color: var(--dorado-acento);
-    margin-bottom: 1rem;
-  }
-  
-  .footer-col ul {
-    list-style: none;
-  }
-  
-  .footer-col ul li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .footer-col a {
-    color: var(--blanco);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-col a:hover {
-    color: var(--dorado-acento);
-  }
-  
-  .footer-bottom {
-    background-color: #122c21;
-    padding: 1.2rem 0;
-    font-size: 0.85rem;
-    color: #a0aec0;
-  }
-  
-  .footer-bottom-flex {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .footer-legal a {
-    color: #a0aec0;
-    text-decoration: none;
-  }
-  
-  .footer-legal a:hover {
-    color: var(--blanco);
-  }
-  
-  /* RESPONSIVO PARA MÓVILES */
-  @media (max-width: 768px) {
-    .nav-container {
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .bienvenida-grid {
-      grid-template-columns: 1fr;
-    }
-    .hero h1 {
-      font-size: 2rem;
-    }
-  }
+}
