@@ -1,10 +1,10 @@
-/* VARIABLES DE COLOR INSTITUCIONALES (ROJO BANDERA PRINCIPAL Y VERDE COMPLEMENTARIO) */
+/* VARIABLES DE COLOR INSTITUCIONALES */
 :root {
-  --rojo-bandera: #a6192e;       /* Rojo mexicano elegante */
-  --rojo-oscuro: #800f21;        /* Rojo borgoña profundo para footer */
-  --verde-bandera: #0f5132;      /* Verde institucional limpio */
-  --verde-claro: #198754;        /* Verde vivo de acento */
-  --dorado-acento: #d4af37;      /* Dorado formal */
+  --rojo-bandera: #a6192e;       /* Rojo institucional elegante */
+  --rojo-oscuro: #6e0f1e;        /* Rojo borgoña profundo */
+  --verde-bandera: #0f5132;      /* Verde bonito y sobrio */
+  --verde-claro: #198754;        /* Verde fresco para detalles */
+  --dorado-acento: #d4af37;      /* Dorado ceremonial */
   --gris-fondo: #f8f9fa;
   --texto-oscuro: #1c1c1c;
   --texto-mutado: #5a6268;
@@ -58,13 +58,15 @@ body {
   text-decoration: none;
 }
 
+/* ESTILO DE LOGOS SIN MARCO NI FONDO BLANCO */
 .header-logo {
-  height: 60px;
+  height: 55px;
   width: auto;
   object-fit: contain;
-  border-radius: 6px;
-  background-color: var(--blanco);
-  padding: 3px;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .brand-text {
@@ -99,36 +101,29 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
 
 .nav-link:hover, .nav-link.active {
   color: var(--blanco);
   background-color: var(--verde-bandera);
-  border-bottom: 2px solid var(--dorado-acento);
 }
 
-/* LOGOS EN ENCABEZADO (MÁS GRANDES Y DESTACADOS) */
 .header-turismo-logos {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
-.logo-pm, .logo-mx {
-  height: 55px;
-  padding: 4px 8px;
-}
-
-/* HERO / PORTADA (USANDO img/fondo.jpg DE LAS PEÑAS DE JILOTEPEC) */
+/* HERO / PORTADA CON LAS PEÑAS EN COLORES NATURALES */
 .hero {
   position: relative;
   background-image: url('img/fondo.jpg');
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 82vh;
   min-height: 520px;
   display: flex;
   align-items: center;
@@ -137,10 +132,11 @@ body {
   text-align: center;
 }
 
+/* Sombreado sutil y natural sobre la montaña (sin tinte rojo excesivo) */
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, rgba(166, 25, 46, 0.45) 0%, rgba(0, 0, 0, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
 
 .hero-content {
@@ -148,26 +144,23 @@ body {
   z-index: 2;
 }
 
-/* Glifo del maíz flotando en Hero */
+/* Glifo de Jilotepec */
 .hero-badge {
   margin-bottom: 1rem;
 }
 
 .glifo-hero {
-  height: 110px;
+  height: 105px;
   width: auto;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 8px;
   border-radius: 50%;
-  border: 3px solid var(--dorado-acento);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .hero h1 {
   font-family: var(--fuente-titulo);
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   font-weight: 900;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.8);
   margin-bottom: 1rem;
 }
 
@@ -175,7 +168,7 @@ body {
   font-size: 1.3rem;
   max-width: 750px;
   margin: 0 auto 2rem auto;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.9);
   font-weight: 500;
 }
 
@@ -280,7 +273,6 @@ body {
   width: 100%;
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  border: 4px solid var(--blanco);
 }
 
 /* TARJETAS (CARDS) */
@@ -365,9 +357,6 @@ body {
 
 .footer-logo {
   height: 65px;
-  background-color: var(--blanco);
-  padding: 5px;
-  border-radius: 8px;
   margin-bottom: 1rem;
 }
 
@@ -411,10 +400,10 @@ body {
   color: var(--dorado-acento);
 }
 
-/* BANNER DE LOGOS GRANDES EN FOOTER */
+/* BANNER DE LOGOS SIN MARCO NI CAJAS BLANCAS */
 .footer-brand-banner {
   background-color: var(--blanco);
-  padding: 2rem 0;
+  padding: 2.2rem 0;
   border-top: 4px solid var(--verde-bandera);
   border-bottom: 4px solid var(--dorado-acento);
 }
@@ -428,9 +417,11 @@ body {
 }
 
 .banner-logo {
-  height: 80px;
+  height: 75px;
   width: auto;
   object-fit: contain;
+  background: transparent !important;
+  border: none !important;
   transition: transform 0.3s;
 }
 
