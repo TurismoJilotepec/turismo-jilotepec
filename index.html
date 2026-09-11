@@ -5,19 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Turismo Jilotepec | Pueblo Mágico</title>
   <link rel="stylesheet" href="estilos.css">
-  <!-- Fuente Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- BARRA SUPERIOR CON LOGOS OFICIALES -->
+  <div class="top-bar">
+    <div class="container top-bar-flex">
+      <div class="logos-oficiales">
+        <img src="img/logo-gobierno.jpg" alt="H. Ayuntamiento Jilotepec 2025-2027" class="logo-top dark-bg">
+        <img src="img/logo-municipio.jpg" alt="Municipio de Jilotepec" class="logo-top">
+      </div>
+      <div class="logos-turismo">
+        <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="logo-top">
+        <img src="img/logo-mexico.png" alt="Visita México" class="logo-top">
+      </div>
+    </div>
+  </div>
+
   <!-- NAVEGACIÓN / MENÚ PRINCIPAL -->
   <header class="header">
     <div class="container nav-container">
-      <a href="index.html" class="logo">
-        <span class="logo-titulo">JILOTEPEC</span>
-        <span class="logo-subtitulo">PUEBLO MÁGICO</span>
+      <a href="index.html" class="logo-brand">
+        <span class="brand-title">JILOTEPEC</span>
+        <span class="brand-sub">DIRECCIÓN DE TURISMO</span>
       </a>
       <nav class="nav-menu">
         <a href="index.html" class="nav-link active">Inicio</a>
@@ -42,13 +55,13 @@
     </div>
   </section>
 
-  <!-- INFORMACIÓN BÁSICA DE BIENVENIDA -->
+  <!-- BIENVENIDA CON GLIFO MUNICIPAL -->
   <section class="seccion container">
     <div class="bienvenida-grid">
       <div class="bienvenida-texto">
-        <h2>Bienvenido a Jilotepec</h2>
-        <p class="destacado">Un rincón lleno de historia, paisajes imponentes y tradiciones ancestrales que enamoran a cada visitante.</p>
-        <p>Jilotepec de Molina Enríquez se distingue por su arquitectura colonial, sus imponentes formaciones rocosas como Las Peñas de Dexcani, sus parques ecológicos y festividades llenas de color y sabor.</p>
+        <h2>Bienvenido a Jilotepec de Molina Enríquez</h2>
+        <p class="destacado">Desarrollo en Armonía | Tierra de Maíz y Tradición</p>
+        <p>Jilotepec se distingue por su arquitectura colonial, sus imponentes formaciones rocosas como Las Peñas de Dexcani, sus parques ecológicos y festividades llenas de color y sabor.</p>
       </div>
       <div class="bienvenida-imagen">
         <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80" alt="Jilotepec Naturaleza">
@@ -56,13 +69,12 @@
     </div>
   </section>
 
-  <!-- TARJETAS DE SECCIONES (Pestañas principales) -->
+  <!-- TARJETAS DE SECCIONES -->
   <section class="seccion bg-gris">
     <div class="container">
       <h2 class="titulo-seccion">Conoce lo que Jilotepec tiene para ti</h2>
       <div class="cards-grid">
         
-        <!-- Tarjeta 1: Atractivos -->
         <article class="card">
           <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Atractivos Turísticos">
           <div class="card-body">
@@ -72,7 +84,6 @@
           </div>
         </article>
 
-        <!-- Tarjeta 2: Eventos -->
         <article class="card">
           <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Eventos y Ferias">
           <div class="card-body">
@@ -82,7 +93,6 @@
           </div>
         </article>
 
-        <!-- Tarjeta 3: Gastronomía -->
         <article class="card">
           <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="Gastronomía">
           <div class="card-body">
@@ -113,18 +123,16 @@
     </div>
   </section>
 
-  <!-- PIE DE PÁGINA / FOOTER COMPLETO -->
+  <!-- PIE DE PÁGINA / FOOTER INSTITUCIONAL -->
   <footer class="footer">
     <div class="container footer-grid">
       
-      <!-- Columna 1: Info -->
       <div class="footer-col">
         <h3>Turismo Jilotepec</h3>
-        <p>H. Ayuntamiento de Jilotepec, Estado de México.</p>
-        <p>Promoviendo la riqueza cultural, natural e histórica de nuestro Municipio y Pueblo Mágico.</p>
+        <p>H. Ayuntamiento Constitucional de Jilotepec 2025-2027.</p>
+        <p><em>"Desarrollo en Armonía"</em></p>
       </div>
 
-      <!-- Columna 2: Enlaces rápidos -->
       <div class="footer-col">
         <h4>Enlaces Rápidos</h4>
         <ul>
@@ -136,24 +144,30 @@
         </ul>
       </div>
 
-      <!-- Columna 3: Contacto -->
       <div class="footer-col">
         <h4>Contacto y Atención</h4>
         <p><strong>Dirección:</strong> Palacio Municipal s/n, Centro, Jilotepec, Edo. de México.</p>
         <p><strong>Teléfono:</strong> (761) 734 0000</p>
         <p><strong>Correo:</strong> turismo@jilotepec.gob.mx</p>
-        <p><strong>Horarios:</strong> Lun a Vie: 9:00 AM - 6:00 PM</p>
       </div>
 
     </div>
 
-    <!-- Barra inferior derechos y aviso -->
+    <!-- MUESTRA DE LOGOS INSTITUCIONALES EN EL FOOTER -->
+    <div class="footer-brand-bar">
+      <div class="container footer-brand-flex">
+        <img src="img/logo-gobierno.jpg" alt="Gobierno Jilotepec">
+        <img src="img/logo-municipio.jpg" alt="Municipio Jilotepec">
+        <img src="img/logo-pueblo-magico.png" alt="Pueblo Mágico">
+        <img src="img/logo-mexico.png" alt="México">
+      </div>
+    </div>
+
     <div class="footer-bottom">
       <div class="container footer-bottom-flex">
         <p>&copy; 2026 Dirección de Turismo de Jilotepec. Todos los derechos reservados.</p>
         <div class="footer-legal">
-          <a href="#">Aviso de Privacidad</a> | 
-          <a href="#">Términos y Condiciones</a>
+          <a href="#">Aviso de Privacidad</a> | <a href="#">Términos y Condiciones</a>
         </div>
       </div>
     </div>

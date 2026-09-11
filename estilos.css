@@ -1,4 +1,82 @@
-/* VARIABLES DE COLOR E INSTITUCIONALES */
+/* BARRA SUPERIOR DE LOGOS OFICIALES */
+.top-bar {
+  background-color: #ffffff;
+  border-bottom: 2px solid #e2e8f0;
+  padding: 0.6rem 0;
+}
+
+.top-bar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logos-oficiales, .logos-turismo {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo-top {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Marca del Menú Navegación */
+.logo-brand {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  color: var(--blanco);
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.brand-sub {
+  color: var(--dorado-acento);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* BANDA DE LOGOS EN EL FOOTER */
+.footer-brand-bar {
+  background-color: #ffffff;
+  padding: 1.2rem 0;
+  border-top: 3rem solid var(--verde-pueblo);
+}
+
+.footer-brand-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-brand-flex img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .top-bar-flex {
+    justify-content: center;
+  }
+  .logo-top {
+    height: 40px;
+  }
+  
+}/* VARIABLES DE COLOR E INSTITUCIONALES */
 :root {
     --verde-pueblo: #1b4332;
     --verde-claro: #2d6a4f;
