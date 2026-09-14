@@ -2,11 +2,11 @@
    PALETA DE COLOR Y VARIABLES INSTITUCIONALES (ROJO VIVO, VERDE Y DORADO)
    ========================================================================== */
    :root {
-    --rojo-bandera: #D90429;       /* Rojo vivo, limpio y elegante */
+    --rojo-bandera: #D90429;       /* Rojo vivo institucional */
     --rojo-oscuro: #8D0801;        /* Rojo borgoña intenso */
-    --rojo-vibrante: #EF233C;      /* Rojo secundario para botones/acentos */
+    --rojo-vibrante: #EF233C;      /* Rojo secundario para hover/botones */
     --verde-bandera: #126838;      /* Verde institucional */
-    --verde-claro: #198754;        /* Verde para enlaces y badges */
+    --verde-claro: #198754;        /* Verde para badges y detalles */
     --dorado-acento: #D4AF37;      /* Dorado ceremonial */
     --gris-fondo: #F8F9FA;
     --texto-oscuro: #1A1A1A;
@@ -114,14 +114,14 @@
     align-items: center;
   }
   
-  /* HERO / PORTADA */
+  /* HERO / PORTADA PRINCIPAL */
   .hero {
     position: relative;
     background-image: url('img/fondo.jpg');
     background-size: cover;
     background-position: center;
-    height: 85vh;
-    min-height: 520px;
+    min-height: 88vh;
+    padding: 4rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,28 +132,36 @@
   .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.75) 100%);
   }
   
   .hero-content {
     position: relative;
     z-index: 2;
+    max-width: 900px;
   }
   
+  /* LOGO PUEBLO MÁGICO DESTACADO EN GRANDE */
   .hero-badge {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .hero-pm-logo {
-    height: 150px;
+    height: 250px; /* TAMAÑO GRANDE DESTACADO */
+    max-width: 90%;
     width: auto;
     object-fit: contain;
-    filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.8));
-    transition: transform 0.3s ease;
+    /* Doble filtro: resplandor blanco brillante + sombra de contraste */
+    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.95)) drop-shadow(0 6px 15px rgba(0, 0, 0, 0.85));
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
   
   .hero-pm-logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1)) drop-shadow(0 8px 20px rgba(0, 0, 0, 0.95));
   }
   
   .hero h1 {
@@ -162,12 +170,13 @@
     font-weight: 900;
     text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.8);
     margin-bottom: 0.8rem;
+    line-height: 1.15;
   }
   
   .hero p {
     font-size: 1.3rem;
-    max-width: 750px;
-    margin: 0 auto 2rem auto;
+    max-width: 780px;
+    margin: 0 auto 2.2rem auto;
     text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.9);
     font-weight: 500;
   }
@@ -295,7 +304,7 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   }
   
-  /* GRID DE TARJETAS DE MUNICIPOS Y ATRACTIVOS */
+  /* GRID DE TARJETAS */
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -364,7 +373,7 @@
     text-decoration: underline;
   }
   
-  /* FORMULARIO DE CONTACTO Y DETALLES */
+  /* FORMULARIO Y CONTACTO */
   .contacto-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -516,7 +525,7 @@
     text-decoration: none;
   }
   
-  /* ADAPTABILIDAD RESPONSIVA */
+  /* RESPONSIVO */
   @media (max-width: 992px) {
     .header-container {
       flex-direction: column;
@@ -533,6 +542,6 @@
       font-size: 2.4rem;
     }
     .hero-pm-logo {
-      height: 110px;
+      height: 170px; /* Tamaño ajustado para pantallas móviles */
     }
   }
