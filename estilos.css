@@ -39,7 +39,7 @@
   /* ENCABEZADO Y NAVEGACIÓN */
   .header {
     background-color: var(--rojo-bandera);
-    padding: 0.8rem 0;
+    padding: 0.6rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -66,6 +66,19 @@
     width: auto;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+  
+  /* LOGO MÉXICO EN EL ENCABEZADO (TAMAÑO MÁS GRANDE) */
+  .header-logo-mexico {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+    transition: transform 0.3s ease;
+  }
+  
+  .header-logo-mexico:hover {
+    transform: scale(1.08);
   }
   
   .brand-text {
@@ -150,11 +163,10 @@
   }
   
   .hero-pm-logo {
-    height: 250px; /* TAMAÑO GRANDE DESTACADO */
+    height: 250px;
     max-width: 90%;
     width: auto;
     object-fit: contain;
-    /* Doble filtro: resplandor blanco brillante + sombra de contraste */
     filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.95)) drop-shadow(0 6px 15px rgba(0, 0, 0, 0.85));
     transition: transform 0.3s ease, filter 0.3s ease;
   }
@@ -542,6 +554,9 @@
       font-size: 2.4rem;
     }
     .hero-pm-logo {
-      height: 170px; /* Tamaño ajustado para pantallas móviles */
+      height: 170px;
+    }
+    .header-logo-mexico {
+      height: 60px;
     }
   }
