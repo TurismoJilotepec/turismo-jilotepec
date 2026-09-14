@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Turismo Jilotepec | Pueblo Mágico</title>
-  <link rel="stylesheet" href="estilos.css">
+
+  <!-- CSS con parámetro de versión para evitar problemas de caché -->
+  <link rel="stylesheet" href="estilos.css?v=3">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ENCABEZADO PRINCIPAL -->
+  <!-- ENCABEZADO FIJO / AUTO-OCULTABLE -->
   <header class="header">
     <div class="container header-container">
       <div class="brand-box">
@@ -30,7 +33,7 @@
         <a href="contacto.html" class="nav-link">Contacto</a>
       </nav>
 
-      <!-- LOGO MÉXICO DESTACADO Y MÁS GRANDE -->
+      <!-- LOGO MÉXICO DESTACADO -->
       <div class="header-turismo-logos">
         <img src="img/logo-mexico.png" alt="Visita México" class="header-logo-mexico">
       </div>
@@ -169,6 +172,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- SCRIPT PARA AUTO-OCULTAR EL HEADER AL DESLIZAR -->
+  <script>
+    let ultimoScroll = 0;
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+      const scrollActual = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Si nos desplazamos HACIA ABAJO y bajamos más de 100px
+      if (scrollActual > ultimoScroll && scrollActual > 100) {
+        header.classList.add('header-oculto');
+      } else {
+        // Si nos desplazamos HACIA ARRIBA
+        header.classList.remove('header-oculto');
+      }
+
+      // Evita valores negativos en scroll elástico (smartphones)
+      ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
+    });
+  </script>
 
 </body>
 </html>
