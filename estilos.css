@@ -1,477 +1,538 @@
-/* VARIABLES DE COLOR INSTITUCIONALES */
-:root {
-  --rojo-bandera: #ed0125;       /* Rojo institucional elegante */
-  --rojo-oscuro: #e30325;        /* Rojo borgoña profundo */
-  --verde-bandera: #0f5132;      /* Verde bonito y sobrio */
-  --verde-claro: #198754;        /* Verde fresco para detalles */
-  --dorado-acento: #fec817;      /* Dorado ceremonial */
-  --gris-fondo: #f8f9fa;
-  --texto-oscuro: #1c1c1c;
-  --texto-mutado: #5a6268;
-  --blanco: #ffffff;
-  --fuente-titulo: 'Playfair Display', serif;
-  --fuente-cuerpo: 'Montserrat', sans-serif;
-}
-
-/* RESET BÁSICO */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--fuente-cuerpo);
-  color: var(--texto-oscuro);
-  line-height: 1.6;
-  background-color: var(--blanco);
-}
-
-.container {
-  width: 92%;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-/* HEADER / NAVEGACIÓN PRINCIPAL */
-.header {
-  background-color: var(--rojo-bandera);
-  padding: 0.8rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border-bottom: 3px solid var(--dorado-acento);
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-
-.brand-box {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  text-decoration: none;
-}
-
-.header-logo {
-  height: 55px;
-  width: auto;
-  object-fit: contain;
-  background: transparent !important;
-  padding: 0 !important;
-  border: none !important;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-title {
-  color: var(--blanco);
-  font-family: var(--fuente-titulo);
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  line-height: 1.1;
-}
-
-.brand-sub {
-  color: var(--dorado-acento);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-
-/* MENÚ DE NAVEGACIÓN */
-.nav-menu {
-  display: flex;
-  gap: 1.2rem;
-}
-
-.nav-link {
-  color: var(--blanco);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.nav-link:hover, .nav-link.active {
-  color: var(--blanco);
-  background-color: var(--verde-bandera);
-}
-
-.header-turismo-logos {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-/* HERO / PORTADA */
-.hero {
-  position: relative;
-  background-image: url('img/fondo.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 85vh;
-  min-height: 540px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blanco);
-  text-align: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.65) 100%);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-/* LOGO PUEBLO MÁGICO EN EL CENTRO DE LA PORTADA */
-.hero-badge {
-  margin-bottom: 1.2rem;
-}
-
-.hero-pm-logo {
-  height: 150px;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.7));
-  transition: transform 0.3s ease;
-}
-
-.hero-pm-logo:hover {
-  transform: scale(1.05);
-}
-
-.hero h1 {
-  font-family: var(--fuente-titulo);
-  font-size: 3.4rem;
-  font-weight: 900;
-  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.8);
-  margin-bottom: 0.8rem;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  max-width: 750px;
-  margin: 0 auto 2rem auto;
-  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.9);
-  font-weight: 500;
-}
-
-/* BOTONES */
-.btn {
-  display: inline-block;
-  padding: 0.9rem 2rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  margin: 0.4rem;
-}
-
-.btn-primary {
-  background-color: var(--rojo-bandera);
-  color: var(--blanco);
-  border: 2px solid var(--rojo-bandera);
-  box-shadow: 0 4px 12px rgba(166, 25, 46, 0.4);
-}
-
-.btn-primary:hover {
-  background-color: var(--verde-bandera);
-  border-color: var(--verde-bandera);
-  transform: translateY(-3px);
-}
-
-.btn-secondary {
-  background-color: var(--verde-bandera);
-  color: var(--blanco);
-  border: 2px solid var(--verde-bandera);
-  box-shadow: 0 4px 12px rgba(15, 81, 50, 0.4);
-}
-
-.btn-secondary:hover {
-  background-color: var(--rojo-bandera);
-  border-color: var(--rojo-bandera);
-  transform: translateY(-3px);
-}
-
-/* SECCIONES GENERALES */
-.seccion {
-  padding: 4.5rem 0;
-}
-
-.bg-gris {
-  background-color: var(--gris-fondo);
-}
-
-.titulo-seccion {
-  font-family: var(--fuente-titulo);
-  text-align: center;
-  font-size: 2.3rem;
-  color: var(--rojo-bandera);
-  margin-bottom: 0.5rem;
-}
-
-.subtitulo-seccion {
-  text-align: center;
-  color: var(--texto-mutado);
-  margin-bottom: 2.5rem;
-  font-size: 1.05rem;
-}
-
-.badge-tag {
-  display: inline-block;
-  background-color: var(--verde-bandera);
-  color: var(--blanco);
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  margin-bottom: 0.8rem;
-  text-transform: uppercase;
-}
-
-/* BIENVENIDA */
-.bienvenida-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.bienvenida-texto h2 {
-  font-family: var(--fuente-titulo);
-  font-size: 2.2rem;
-  color: var(--rojo-bandera);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.bienvenida-texto .destacado {
-  font-weight: 700;
-  color: var(--verde-bandera);
-  margin-bottom: 1.2rem;
-  font-size: 1.15rem;
-}
-
-.bienvenida-imagen img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-/* TARJETAS (CARDS) */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: var(--blanco);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  border-top: 4px solid var(--rojo-bandera);
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  border-top-color: var(--verde-bandera);
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 1.8rem;
-}
-
-.card-body h3 {
-  font-family: var(--fuente-titulo);
-  color: var(--rojo-bandera);
-  margin-bottom: 0.6rem;
-  font-size: 1.35rem;
-}
-
-.card-body p {
-  color: var(--texto-mutado);
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-}
-
-.card-link {
-  color: var(--verde-bandera);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.95rem;
-  transition: color 0.3s;
-}
-
-.card-link:hover {
-  color: var(--rojo-bandera);
-}
-
-/* MAPA */
-.mapa-wrapper {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  border: 3px solid var(--rojo-bandera);
-}
-
-/* FOOTER */
-.footer {
-  background-color: var(--rojo-oscuro);
-  color: var(--blanco);
-  padding-top: 3.5rem;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 3rem;
-  padding-bottom: 3rem;
-}
-
-.footer-logo {
-  height: 65px;
-  margin-bottom: 1rem;
-}
-
-.footer-col h3 {
-  font-family: var(--fuente-titulo);
-  color: var(--dorado-acento);
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
-
-.slogan-footer {
-  color: var(--dorado-acento);
-  font-weight: 700;
-  margin-top: 0.5rem;
-}
-
-.footer-col h4 {
-  color: var(--dorado-acento);
-  margin-bottom: 1.2rem;
-  font-size: 1.1rem;
-  border-bottom: 2px solid var(--verde-bandera);
-  padding-bottom: 0.4rem;
-  display: inline-block;
-}
-
-.footer-col ul {
-  list-style: none;
-}
-
-.footer-col ul li {
-  margin-bottom: 0.6rem;
-}
-
-.footer-col a {
-  color: #f1f1f1;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-col a:hover {
-  color: var(--dorado-acento);
-}
-
-/* BANNER DE LOGOS EN FOOTER */
-.footer-brand-banner {
-  background-color: var(--blanco);
-  padding: 2.2rem 0;
-  border-top: 4px solid var(--verde-bandera);
-  border-bottom: 4px solid var(--dorado-acento);
-}
-
-.footer-brand-flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.banner-logo {
-  height: 75px;
-  width: auto;
-  object-fit: contain;
-  background: transparent !important;
-  border: none !important;
-  transition: transform 0.3s;
-}
-
-.banner-logo:hover {
-  transform: scale(1.08);
-}
-
-.footer-bottom {
-  background-color: #120205;
-  padding: 1.4rem 0;
-  font-size: 0.88rem;
-  color: #cccccc;
-}
-
-.footer-bottom-flex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.footer-legal a {
-  color: #cccccc;
-  text-decoration: none;
-}
-
-.footer-legal a:hover {
-  color: var(--blanco);
-}
-
-/* RESPONSIVO MÓVIL */
-@media (max-width: 992px) {
+/* ==========================================================================
+   PALETA DE COLOR Y VARIABLES INSTITUCIONALES (ROJO VIVO, VERDE Y DORADO)
+   ========================================================================== */
+   :root {
+    --rojo-bandera: #D90429;       /* Rojo vivo, limpio y elegante */
+    --rojo-oscuro: #8D0801;        /* Rojo borgoña intenso */
+    --rojo-vibrante: #EF233C;      /* Rojo secundario para botones/acentos */
+    --verde-bandera: #126838;      /* Verde institucional */
+    --verde-claro: #198754;        /* Verde para enlaces y badges */
+    --dorado-acento: #D4AF37;      /* Dorado ceremonial */
+    --gris-fondo: #F8F9FA;
+    --texto-oscuro: #1A1A1A;
+    --texto-mutado: #5A6268;
+    --blanco: #FFFFFF;
+    --fuente-titulo: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+  }
+  
+  /* RESET GLOBAL */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--fuente-cuerpo);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+    background-color: var(--blanco);
+  }
+  
+  .container {
+    width: 92%;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  
+  /* ENCABEZADO Y NAVEGACIÓN */
+  .header {
+    background-color: var(--rojo-bandera);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid var(--dorado-acento);
+  }
+  
   .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .brand-box {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+  }
+  
+  .header-logo {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+  
+  .brand-text {
+    display: flex;
     flex-direction: column;
+  }
+  
+  .brand-title {
+    color: var(--blanco);
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+  
+  .brand-sub {
+    color: var(--dorado-acento);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: var(--blanco);
+    background-color: var(--verde-bandera);
+  }
+  
+  .header-turismo-logos {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* HERO / PORTADA */
+  .hero {
+    position: relative;
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
     text-align: center;
   }
-  .nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
   }
-  .bienvenida-grid {
-    grid-template-columns: 1fr;
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
   }
-  .hero h1 {
-    font-size: 2.4rem;
+  
+  .hero-badge {
+    margin-bottom: 1.2rem;
   }
+  
   .hero-pm-logo {
-    height: 110px;
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.8));
+    transition: transform 0.3s ease;
   }
-}
+  
+  .hero-pm-logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .hero h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 3.4rem;
+    font-weight: 900;
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero p {
+    font-size: 1.3rem;
+    max-width: 750px;
+    margin: 0 auto 2rem auto;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.9);
+    font-weight: 500;
+  }
+  
+  /* CABECERA PARA SUBPÁGINAS */
+  .page-header {
+    background: linear-gradient(135deg, var(--rojo-bandera) 0%, var(--rojo-oscuro) 100%);
+    color: var(--blanco);
+    padding: 3.5rem 0;
+    text-align: center;
+    border-bottom: 4px solid var(--dorado-acento);
+  }
+  
+  .page-header h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-header p {
+    font-size: 1.15rem;
+    opacity: 0.9;
+  }
+  
+  /* BOTONES */
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin: 0.4rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--rojo-bandera);
+    color: var(--blanco);
+    border: 2px solid var(--rojo-bandera);
+    box-shadow: 0 4px 12px rgba(217, 4, 41, 0.4);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--verde-bandera);
+    border-color: var(--verde-bandera);
+    transform: translateY(-3px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--verde-bandera);
+    color: var(--blanco);
+    border: 2px solid var(--verde-bandera);
+    box-shadow: 0 4px 12px rgba(18, 104, 56, 0.4);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--rojo-bandera);
+    border-color: var(--rojo-bandera);
+    transform: translateY(-3px);
+  }
+  
+  /* SECCIONES Y CONTENIDOS GENERALES */
+  .seccion {
+    padding: 4.5rem 0;
+  }
+  
+  .bg-gris {
+    background-color: var(--gris-fondo);
+  }
+  
+  .titulo-seccion {
+    font-family: var(--fuente-titulo);
+    text-align: center;
+    font-size: 2.3rem;
+    color: var(--rojo-bandera);
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitulo-seccion {
+    text-align: center;
+    color: var(--texto-mutado);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+  }
+  
+  .badge-tag {
+    display: inline-block;
+    background-color: var(--verde-bandera);
+    color: var(--blanco);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+  }
+  
+  /* BIENVENIDA */
+  .bienvenida-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+  
+  .bienvenida-texto h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.2rem;
+    color: var(--rojo-bandera);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .bienvenida-texto .destacado {
+    font-weight: 700;
+    color: var(--verde-bandera);
+    margin-bottom: 1.2rem;
+    font-size: 1.15rem;
+  }
+  
+  .bienvenida-imagen img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  
+  /* GRID DE TARJETAS DE MUNICIPOS Y ATRACTIVOS */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background: var(--blanco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--rojo-bandera);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(217, 4, 41, 0.18);
+    border-top-color: var(--verde-bandera);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .card-body {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .card-body h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--rojo-bandera);
+    margin-bottom: 0.6rem;
+    font-size: 1.35rem;
+  }
+  
+  .card-body p {
+    color: var(--texto-mutado);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .card-link {
+    color: var(--rojo-bandera);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+  
+  .card-link:hover {
+    color: var(--rojo-vibrante);
+    text-decoration: underline;
+  }
+  
+  /* FORMULARIO DE CONTACTO Y DETALLES */
+  .contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .form-grupo {
+    margin-bottom: 1.2rem;
+  }
+  
+  .form-grupo label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--texto-oscuro);
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 8px;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.95rem;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--rojo-bandera);
+  }
+  
+  .info-box {
+    background-color: var(--gris-fondo);
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 5px solid var(--rojo-bandera);
+  }
+  
+  .info-box h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--rojo-bandera);
+    margin-bottom: 1rem;
+  }
+  
+  /* MAPA */
+  .mapa-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border: 3px solid var(--rojo-bandera);
+  }
+  
+  /* FOOTER INSTITUCIONAL */
+  .footer {
+    background-color: var(--rojo-oscuro);
+    color: var(--blanco);
+    padding-top: 3.5rem;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .footer-logo {
+    height: 65px;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-col h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--dorado-acento);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .slogan-footer {
+    color: var(--dorado-acento);
+    font-weight: 700;
+    margin-top: 0.5rem;
+  }
+  
+  .footer-col h4 {
+    color: var(--dorado-acento);
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--verde-bandera);
+    padding-bottom: 0.4rem;
+    display: inline-block;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 0.6rem;
+  }
+  
+  .footer-col a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-col a:hover {
+    color: var(--dorado-acento);
+  }
+  
+  .footer-brand-banner {
+    background-color: var(--blanco);
+    padding: 2rem 0;
+    border-top: 4px solid var(--verde-bandera);
+    border-bottom: 4px solid var(--dorado-acento);
+  }
+  
+  .footer-brand-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .banner-logo {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .footer-bottom {
+    background-color: #120205;
+    padding: 1.4rem 0;
+    font-size: 0.88rem;
+    color: #cccccc;
+  }
+  
+  .footer-bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .footer-legal a {
+    color: #cccccc;
+    text-decoration: none;
+  }
+  
+  /* ADAPTABILIDAD RESPONSIVA */
+  @media (max-width: 992px) {
+    .header-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .nav-menu {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .bienvenida-grid, .contacto-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+    }
+    .hero-pm-logo {
+      height: 110px;
+    }
+  }
