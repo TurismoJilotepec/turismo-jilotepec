@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Turismo Jilotepec | Pueblo Mágico</title>
 
-  <!-- CSS con parámetro de versión para evitar problemas de caché -->
   <link rel="stylesheet" href="estilos.css?v=3">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +13,6 @@
 </head>
 <body>
 
-  <!-- ENCABEZADO FIJO / AUTO-OCULTABLE -->
   <header class="header">
     <div class="container header-container">
       <div class="brand-box">
@@ -33,14 +31,12 @@
         <a href="contacto.html" class="nav-link">Contacto</a>
       </nav>
 
-      <!-- LOGO MÉXICO DESTACADO -->
       <div class="header-turismo-logos">
         <img src="img/logo-mexico.png" alt="Visita México" class="header-logo-mexico">
       </div>
     </div>
   </header>
 
-  <!-- PORTADA HERO -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content container">
@@ -58,7 +54,6 @@
     </div>
   </section>
 
-  <!-- BIENVENIDA INSTITUCIONAL -->
   <section class="seccion container">
     <div class="bienvenida-grid">
       <div class="bienvenida-texto">
@@ -73,7 +68,6 @@
     </div>
   </section>
 
-  <!-- SECCIÓN TARJETAS -->
   <section class="seccion bg-gris">
     <div class="container">
       <h2 class="titulo-seccion">Lo Mejor de Nuestro Municipio</h2>
@@ -110,7 +104,6 @@
     </div>
   </section>
 
-  <!-- MAPA DE UBICACIÓN -->
   <section id="mapa" class="seccion container">
     <h2 class="titulo-seccion">Ubicación y Cómo Llegar</h2>
     <p class="subtitulo-seccion">Jilotepec se encuentra ubicado estratégicamente al norte del Estado de México.</p>
@@ -126,7 +119,6 @@
     </div>
   </section>
 
-  <!-- FOOTER INSTITUCIONAL -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
@@ -173,7 +165,6 @@
     </div>
   </footer>
 
-  <!-- SCRIPT PARA AUTO-OCULTAR EL HEADER AL DESLIZAR -->
   <script>
     let ultimoScroll = 0;
     const header = document.querySelector('.header');
@@ -181,15 +172,11 @@
     window.addEventListener('scroll', () => {
       const scrollActual = window.pageYOffset || document.documentElement.scrollTop;
 
-      // Si nos desplazamos HACIA ABAJO y bajamos más de 100px
       if (scrollActual > ultimoScroll && scrollActual > 100) {
         header.classList.add('header-oculto');
       } else {
-        // Si nos desplazamos HACIA ARRIBA
         header.classList.remove('header-oculto');
       }
-
-      // Evita valores negativos en scroll elástico (smartphones)
       ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
     });
   </script>
