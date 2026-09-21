@@ -3,43 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sección | Turismo Jilotepec</title>
-  <link rel="stylesheet" href="estilos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>Atractivos Turísticos | Turismo Jilotepec</title>
+  <link rel="stylesheet" href="estilos.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header class="header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">
-        <span class="logo-titulo">JILOTEPEC</span>
-        <span class="logo-subtitulo">PUEBLO MÁGICO</span>
-      </a>
+    <div class="container header-container">
+      <div class="brand-box">
+        <img src="img/logo-gobierno.jpg" alt="Gobierno Jilotepec" class="header-logo">
+        <div class="brand-text">
+          <span class="brand-title">JILOTEPEC</span>
+          <span class="brand-sub">PUEBLO MÁGICO • TURISMO</span>
+        </div>
+      </div>
+
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Inicio</a>
-        <a href="atractivos.html" class="nav-link">Atractivos</a>
+        <a href="atractivos.html" class="nav-link active">Atractivos</a>
         <a href="eventos.html" class="nav-link">Eventos y Ferias</a>
         <a href="gastronomia.html" class="nav-link">Gastronomía</a>
         <a href="contacto.html" class="nav-link">Contacto</a>
       </nav>
+
+      <div class="header-turismo-logos">
+        <img src="img/logo-mexico.png" alt="Visita México" class="header-logo-mexico">
+      </div>
     </div>
   </header>
 
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <div class="hero-badge">
+        <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="hero-pm-logo">
+      </div>
+      <h1>Atractivos Turísticos</h1>
+      <p>Descubre la riqueza natural, histórica, arquitectónica y cultural que hace único a nuestro Pueblo Mágico.</p>
+    </div>
+  </section>
+
   <section class="seccion container">
-    <h1 class="titulo-seccion">Sección en Construcción</h1>
-    <p class="subtitulo-seccion">Estamos preparando la mejor información para ti.</p>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+    <h2 class="titulo-seccion">Ecoturismo y Naturaleza</h2>
+    <p class="subtitulo-seccion">Espacios naturales ideales para la aventura, el descanso y el contacto con la biodiversidad.</p>
+
+    <div class="cards-grid">
+      <article class="card">
+        <img src="img/penas-dexcani.jpg" alt="Parque Ecoturístico Las Peñas de Dexcani">
+        <div class="card-body">
+          <h3>Parque Ecoturístico Las Peñas de Dexcani</h3>
+          <p>Impresionantes formaciones rocosas ideales para el senderismo, la escalada deportiva, el rapel, el ciclismo de montaña y el campismo en un entorno de bosque de encinos y pinos.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/presa-danxho.jpg" alt="Presa y Parque Danxhó">
+        <div class="card-body">
+          <h3>Presa y Parque Danxhó</h3>
+          <p>Un magnífico cuerpo de agua rodeado de áreas verdes donde se puede practicar la pesca deportiva, dar paseos en lancha, realizar días de campo familiares y degustar carpa fresca.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/parque-sequoias.jpg" alt="Parque Urbano Las Sequoias">
+        <div class="card-body">
+          <h3>Parque Urbano Las Sequoias</h3>
+          <p>Un espacio natural único en la región por albergar majestuosos ejemplares de sequoias, árboles de gran altura que ofrecen un ambiente fresco, tranquilo y perfecto para caminatas.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="seccion bg-gris">
+    <div class="container">
+      <h2 class="titulo-seccion">Patrimonio Histórico y Religioso</h2>
+      <p class="subtitulo-seccion">Joyas de la arquitectura colonial e hitos de fe que guardan siglos de tradición.</p>
+
+      <div class="cards-grid">
+        <article class="card">
+          <img src="img/parroquia-san-pedro.jpg" alt="Parroquia de San Pedro y San Pablo">
+          <div class="card-body">
+            <h3>Parroquia de San Pedro y San Pablo</h3>
+            <p>Construida durante la época colonial por la orden franciscana, destaca por su imponente fachada de cantera, retablos barrocos e interiores con alto valor artístico y espiritual.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/santuario-piedrita.jpg" alt="Santuario Diocesano de la Virgen de la Piedrita">
+          <div class="card-body">
+            <h3>Santuario de la Virgen de la Piedrita</h3>
+            <p>Emblemático centro de peregrinación de la región. Su historia está ligada a la aparición milagrosa de la imagen de la Virgen en una piedra, atrayendo a miles de feligreses cada año.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/ex-hacienda-doxhicho.jpg" alt="Ex Hacienda de Doxhicho">
+          <div class="card-body">
+            <h3>Ex Hacienda de Doxhicho</h3>
+            <p>Antigua propiedad virreinal que conserva su arquitectura colonial, amplios patios y jardines históricos. Representa el pasado virreinal y agrícola de Jilotepec.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/cruz-dendho.jpg" alt="Cruz de Dendho">
+          <div class="card-body">
+            <h3>Cruz de Dendho</h3>
+            <p>Monumento histórico de piedra tallada erigido durante la evangelización franciscana. Es una de las cruces monolíticas más importantes y antiguas de la zona.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/petroglifos-octeyuco.jpg" alt="Petroglifos de San Lorenzo Octeyuco">
+          <div class="card-body">
+            <h3>Petroglifos de San Lorenzo Octeyuco</h3>
+            <p>Vestigios arqueológicos prehispánicos grabados sobre roca por las antiguas culturas Otomíes, representando figuras humanas, animales y símbolos cosmogónicos.</p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="img/logo-gobierno.jpg" alt="Gobierno Jilotepec" class="footer-logo">
+        <h3>Turismo Jilotepec</h3>
+        <p>H. Ayuntamiento Constitucional de Jilotepec</p>
+        <p class="slogan-footer">"Desarrollo en Armonía"</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="atractivos.html">Atractivos Turísticos</a></li>
+          <li><a href="eventos.html">Eventos y Ferias</a></li>
+          <li><a href="gastronomia.html">Gastronomía</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención Ciudadana</h4>
+        <p><strong>Dirección:</strong> Palacio Municipal s/n, Centro, Jilotepec, Estado de México.</p>
+        <p><strong>Teléfono:</strong> (761) 734 0000</p>
+        <p><strong>Correo:</strong> turismo@jilotepec.gob.mx</p>
+      </div>
+    </div>
+
+    <div class="footer-brand-banner">
+      <div class="container footer-brand-flex">
+        <img src="img/logo-pueblo-magico.png" alt="Pueblo Mágico" class="banner-logo">
+        <img src="img/logo-municipio.png" alt="Municipio" class="banner-logo">
+        <img src="img/logo-mexico.png" alt="Visita México" class="banner-logo">
+      </div>
+    </div>
+
     <div class="footer-bottom">
       <div class="container footer-bottom-flex">
-        <p>&copy; 2026 Dirección de Turismo de Jilotepec.</p>
+        <p>&copy; 2026 Dirección de Turismo de Jilotepec. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Aviso de Privacidad</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    let ultimoScroll = 0;
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+      const scrollActual = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollActual > ultimoScroll && scrollActual > 100) {
+        header.classList.add('header-oculto');
+      } else {
+        header.classList.remove('header-oculto');
+      }
+
+      ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
+    });
+  </script>
 
 </body>
 </html>
