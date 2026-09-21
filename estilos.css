@@ -535,3 +535,61 @@
       height: 170px;
     }
   }
+  /* ==========================================
+   MARCAS DE AGUA LATERALES (MAÍZ)
+   ========================================== */
+
+/* Prepara las secciones para alojar las marcas de agua */
+.seccion {
+  position: relative;
+  overflow: hidden; /* Evita barras de desplazamiento horizontales */
+}
+
+/* Coloca el contenido por encima del fondo */
+.seccion .container,
+.cards-grid {
+  position: relative;
+  z-index: 2;
+}
+
+/* Marca de agua a la izquierda */
+.seccion::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -40px; /* Se asoma ligeramente desde el borde izquierdo */
+  transform: translateY(-50%) rotate(-15deg);
+  width: 260px;
+  height: 260px;
+  background-image: url('img/maiz-watermark.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.08; /* Opacidad muy sutil para efecto marca de agua */
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Marca de agua a la derecha */
+.seccion::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -40px; /* Se asoma ligeramente desde el borde derecho */
+  transform: translateY(-50%) scaleX(-1) rotate(-15deg); /* Reflejado horizontalmente */
+  width: 260px;
+  height: 260px;
+  background-image: url('img/maiz-watermark.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* En dispositivos móviles se oculta para no encimar el texto */
+@media (max-width: 1024px) {
+  .seccion::before,
+  .seccion::after {
+    display: none;
+  }
+}
