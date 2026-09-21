@@ -9,10 +9,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    .btn-maps {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #a71d2a 0%, #7a101c 100%);
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(167, 29, 42, 0.25);
+      transition: all 0.3s ease;
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .btn-maps:hover {
+      background: linear-gradient(135deg, #c82333 0%, #8b1220 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(167, 29, 42, 0.38);
+      color: #ffffff !important;
+    }
+
+    .btn-maps svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER / NAVEGACIÓN -->
   <header class="header">
     <div class="container header-container">
       <div class="brand-box">
@@ -37,7 +73,6 @@
     </div>
   </header>
 
-  <!-- HERO ATRACTIVOS -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content container">
@@ -45,119 +80,134 @@
         <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="hero-pm-logo">
       </div>
       <h1>Atractivos Turísticos</h1>
-      <p>Descubre la riqueza histórica, arquitectura virreinal y los paisajes naturales únicos que hacen de Jilotepec un Pueblo Mágico inolvidable.</p>
+      <p>Descubre la riqueza natural, histórica, arquitectónica y cultural que hace único a nuestro Pueblo Mágico.</p>
     </div>
   </section>
 
-  <!-- SECCIÓN 1: PATRIMONIO HISTÓRICO Y CULTURAL (6 TARJETAS) -->
   <section class="seccion container">
-    <h2 class="titulo-seccion">Patrimonio Histórico y Cultural</h2>
-    <p class="subtitulo-seccion">Un recorrido por los monumentos y recintos que guardan siglos de historia y tradición.</p>
+    <h2 class="titulo-seccion">Ecoturismo y Naturaleza</h2>
+    <p class="subtitulo-seccion">Espacios naturales ideales para la aventura, el descanso y el contacto con la biodiversidad.</p>
 
     <div class="cards-grid">
-      <!-- Tarjeta 1 -->
       <article class="card">
-        <img src="img/parroquia.jpg" alt="Parroquia de San Pedro Apóstol">
+        <img src="img/penas-dexcani.jpg" alt="Parque Ecoturístico Las Peñas de Dexcani">
         <div class="card-body">
-          <h3>Parroquia de San Pedro Apóstol</h3>
-          <p>Majestuoso templo del siglo XVI de arquitectura franciscana, famoso por su imponente atrio rodeado de capillas posas y su rico legado virreinal.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Pedro+Apostol+Jilotepec" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
+          <h3>Parque Ecoturístico Las Peñas de Dexcani</h3>
+          <p>Impresionantes formaciones rocosas ideales para el senderismo, la escalada deportiva, el rapel, el ciclismo de montaña y el campismo en un entorno de bosque de encinos y pinos.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Parque+Ecoturistico+Las+Penas+de+Dexcani+Jilotepec" target="_blank" rel="noopener noreferrer" class="btn-maps">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Cómo llegar
+          </a>
         </div>
       </article>
 
-      <!-- Tarjeta 2 (Con enlace actualizado) -->
       <article class="card">
-        <img src="img/jardin-central.jpg" alt="Jardín Central de Jilotepec">
+        <img src="img/presa-danxho.jpg" alt="Presa y Parque Danxhó">
         <div class="card-body">
-          <h3>Jardín Central</h3>
-          <p>Corazón social y cultural del Pueblo Mágico. Un vistoso quiosco tradicional rodeado de arboladas jardineras, perfecto para caminar, disfrutar un helado y admirar el ambiente local.</p>
-          <a href="https://maps.app.goo.gl/fEbsRnCWJAFAAqz78" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
+          <h3>Presa y Parque Danxhó</h3>
+          <p>Un magnífico cuerpo de agua rodeado de áreas verdes donde se puede practicar la pesca deportiva, dar paseos en lancha, realizar días de campo familiares y degustar carpa fresca.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Presa+Danxho+Jilotepec" target="_blank" rel="noopener noreferrer" class="btn-maps">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Cómo llegar
+          </a>
         </div>
       </article>
 
-      <!-- Tarjeta 3 -->
       <article class="card">
-        <img src="img/santuario-piedrita.jpg" alt="Santuario de la Virgen de Guadalupe La Piedrita">
+        <img src="img/parque-sequoias.jpg" alt="Parque Urbano Las Sequoias">
         <div class="card-body">
-          <h3>Santuario de La Piedrita</h3>
-          <p>Enigmático templo neogótico erigido en honor a la Virgen de Guadalupe, donde se venera una imagen aparecida sobre una roca natural.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Santuario+de+La+Piedrita+Jilotepec" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
-        </div>
-      </article>
-
-      <!-- Tarjeta 4 -->
-      <article class="card">
-        <img src="img/hacienda-canalejas.jpg" alt="Ex Hacienda de Canalejas">
-        <div class="card-body">
-          <h3>Ex Hacienda de Canalejas</h3>
-          <p>Antiguo complejo hacendario que evoca el pasado agrícola y ganadero de la región. Conserva imponentes murallas, casco histórico y capilla virreinal.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Ex+Hacienda+de+Canalejas+Jilotepec" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
-        </div>
-      </article>
-
-      <!-- Tarjeta 5 -->
-      <article class="card">
-        <img src="img/cruz-xhithey.jpg" alt="Cruz de Xhithey">
-        <div class="card-body">
-          <h3>Cruz de Xhithey</h3>
-          <p>Monumento histórico tallado en cantera de gran valor identitario y espiritual, representativo del mestizaje y la devoción de las comunidades de Jilotepec.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Cruz+de+Xhithey+Jilotepec" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
-        </div>
-      </article>
-
-      <!-- Tarjeta 6 -->
-      <article class="card">
-        <img src="img/casa-cultura.jpg" alt="Centro Cultural Mamämxe">
-        <div class="card-body">
-          <h3>Centro Cultural Mamämxe</h3>
-          <p>Espacio dedicado al rescate de la cultura Otomí y las artes plásticas locales. Ofrece talleres, exposiciones itinerantes y eventos folclóricos durante todo el año.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Jilotepec" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
+          <h3>Parque Urbano Las Sequoias</h3>
+          <p>Un espacio natural único en la región por albergar majestuosos ejemplares de sequoias, árboles de gran altura que ofrecen un ambiente fresco, tranquilo y perfecto para caminatas.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Parque+Urbano+Las+Sequoias+Jilotepec" target="_blank" rel="noopener noreferrer" class="btn-maps">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Cómo llegar
+          </a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- SECCIÓN 2: ECOTURISMO Y NATURALEZA (3 TARJETAS) -->
   <section class="seccion bg-gris">
     <div class="container">
-      <h2 class="titulo-seccion">Ecoturismo y Naturaleza</h2>
-      <p class="subtitulo-seccion">Espacios naturales ideales para la aventura, el descanso y el contacto con la biodiversidad.</p>
+      <h2 class="titulo-seccion">Patrimonio Histórico y Religioso</h2>
+      <p class="subtitulo-seccion">Joyas de la arquitectura colonial e hitos de fe que guardan siglos de tradición.</p>
 
       <div class="cards-grid">
-        <!-- Tarjeta 1 -->
         <article class="card">
-          <img src="img/penas-dexcani.jpg" alt="Parque Ecoturístico Las Peñas de Dexcani">
+          <img src="img/parroquia-san-pedro.jpg" alt="Parroquia de San Pedro y San Pablo">
           <div class="card-body">
-            <h3>Parque Ecoturístico Las Peñas de Dexcani</h3>
-            <p>Impresionantes formaciones rocosas ideales para el senderismo, la escalada deportiva, el rapel, el ciclismo de montaña y el campismo en un entorno de bosque de encinos y pinos.</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Las+Penas+de+Dexcani+Jilotepec" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
+            <h3>Parroquia de San Pedro y San Pablo</h3>
+            <p>Construida durante la época colonial por la orden franciscana, destaca por su imponente fachada de cantera, retablos barrocos e interiores con alto valor artístico y espiritual.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Pedro+y+San+Pablo+Jilotepec" target="_blank" rel="noopener noreferrer" class="btn-maps">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Cómo llegar
+            </a>
           </div>
         </article>
 
-        <!-- Tarjeta 2 -->
         <article class="card">
-          <img src="img/presa-danxho.jpg" alt="Presa y Parque Danxhó">
+          <img src="img/santuario-piedrita.jpg" alt="Santuario Diocesano de la Virgen de la Piedrita">
           <div class="card-body">
-            <h3>Presa y Parque Danxhó</h3>
-            <p>Un magnífico cuerpo de agua rodeado de áreas verdes donde se puede practicar la pesca deportiva, dar paseos en lancha, realizar días de campo familiares y degustar carpa fresca.</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Presa+Danxho+Jilotepec" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
+            <h3>Santuario de la Virgen de la Piedrita</h3>
+            <p>Emblemático centro de peregrinación de la región. Su historia está ligada a la aparición milagrosa de la imagen de la Virgen en una piedra, atrayendo a miles de feligreses cada año.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Santuario+de+la+Virgen+de+la+Piedrita+Jilotepec" target="_blank" rel="noopener noreferrer" class="btn-maps">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Cómo llegar
+            </a>
           </div>
         </article>
 
-        <!-- Tarjeta 3 -->
         <article class="card">
-          <img src="img/las-sequoias.jpg" alt="Parque Urbano Las Sequoias">
+          <img src="img/ex-hacienda-doxhicho.jpg" alt="Ex Hacienda de Doxhicho">
           <div class="card-body">
-            <h3>Parque Urbano Las Sequoias</h3>
-            <p>Un espacio natural único en la región por albergar majestuosos ejemplares de sequoias, árboles de gran altura que ofrecen un ambiente fresco, tranquilo y perfecto para caminatas.</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Parque+Las+Sequoias+Jilotepec" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
+            <h3>Ex Hacienda de Doxhicho</h3>
+            <p>Antigua propiedad virreinal que conserva su arquitectura colonial, amplios patios y jardines históricos. Representa el pasado virreinal y agrícola de Jilotepec.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Ex+Hacienda+de+Doxhicho+Jilotepec" target="_blank" rel="noopener noreferrer" class="btn-maps">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/cruz-dendho.jpg" alt="Cruz de Dendho">
+          <div class="card-body">
+            <h3>Cruz de Dendho</h3>
+            <p>Monumento histórico de piedra tallada erigido durante la evangelización franciscana. Es una de las cruces monolíticas más importantes y antiguas de la zona.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cruz+de+Dendho+Jilotepec" target="_blank" rel="noopener noreferrer" class="btn-maps">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/petroglifos-octeyuco.jpg" alt="Petroglifos de San Lorenzo Octeyuco">
+          <div class="card-body">
+            <h3>Petroglifos de San Lorenzo Octeyuco</h3>
+            <p>Vestigios arqueológicos prehispánicos grabados sobre roca por las antiguas culturas Otomíes, representando figuras humanas, animales y símbolos cosmogónicos.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Petroglifos+San+Lorenzo+Octeyuco+Jilotepec" target="_blank" rel="noopener noreferrer" class="btn-maps">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/jardin-central.jpg" alt="Jardín Central y Kiosco Municipal">
+          <div class="card-body">
+            <h3>Jardín Central y Kiosco Municipal</h3>
+            <p>El corazón histórico de Jilotepec. Un hermoso espacio arbolado con un tradicional kiosco de hierro forjado, ideal para caminar, disfrutar de nieves artesanales y admirar los portales.</p>
+            <a href="https://maps.app.goo.gl/fEbsRnCWJAFAAqz78" target="_blank" rel="noopener" class="btn-card">📍 CÓMO LLEGAR</a>
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Cómo llegar
+            </a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
@@ -204,7 +254,6 @@
     </div>
   </footer>
 
-  <!-- SCRIPT HEADER DINÁMICO -->
   <script>
     let ultimoScroll = 0;
     const header = document.querySelector('.header');
