@@ -44,8 +44,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.88);
-      backdrop-filter: blur(6px);
+      background-color: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(8px);
       animation: fadeInModal 0.25s ease-out;
     }
 
@@ -67,12 +67,13 @@
     }
 
     .modal-imagen {
-      max-width: 90%;
-      max-height: 82vh;
+      max-width: 88%;
+      max-height: 75vh;
       border-radius: 8px;
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
       object-fit: contain;
       user-select: none;
+      transition: opacity 0.2s ease;
     }
 
     .modal-caption {
@@ -85,18 +86,27 @@
       max-width: 80%;
     }
 
+    .modal-counter {
+      color: #d4af37;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 5px;
+      letter-spacing: 1px;
+    }
+
     .modal-cerrar {
       position: absolute;
       top: 20px;
-      right: 30px;
+      right: 25px;
       color: #ffffff;
-      font-size: 38px;
+      font-size: 36px;
       font-weight: 700;
       cursor: pointer;
       transition: color 0.2s ease, transform 0.2s ease;
       line-height: 1;
-      z-index: 100000;
-      background: rgba(0,0,0,0.4);
+      z-index: 100001;
+      background: rgba(0,0,0,0.5);
       width: 45px;
       height: 45px;
       border-radius: 50%;
@@ -108,7 +118,43 @@
     .modal-cerrar:hover {
       color: #ff4d4d;
       transform: scale(1.1);
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.8);
+    }
+
+    .modal-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(122, 16, 28, 0.75);
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      font-size: 24px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100001;
+      transition: all 0.25s ease;
+      user-select: none;
+    }
+
+    .modal-nav-btn:hover {
+      background: #a71d2a;
+      border-color: #ffffff;
+      transform: translateY(-50%) scale(1.12);
+      box-shadow: 0 0 15px rgba(167, 29, 42, 0.6);
+    }
+
+    .modal-prev { left: 25px; }
+    .modal-next { right: 25px; }
+
+    @media (max-width: 600px) {
+      .modal-prev { left: 10px; }
+      .modal-next { right: 10px; }
+      .modal-nav-btn { width: 40px; height: 40px; font-size: 18px; }
     }
   </style>
 </head>
@@ -145,17 +191,17 @@
         <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="hero-pm-logo">
       </div>
       <h1>Sazones y Tradición Gastronómica</h1>
-      <p>Descubre la riqueza culinaria de Jilotepec: desde la ancestral barbacoa de hoyo hasta el pulque artesanal y la fresca carpa de nuestras presas.</p>
+      <p>Descubre la riqueza culinaria de Jilotepec: desde la ancestral barbacoa de hoyo hasta el pulque artesanal y los dulces típicos.</p>
     </div>
   </section>
 
   <section class="seccion container">
     <h2 class="titulo-seccion">Platillos Emblemáticos</h2>
-    <p class="subtitulo-seccion">La sazón del norte del Estado de México en su máxima expresión. Haz clic en cualquier platillo para ver la imagen completa.</p>
+    <p class="subtitulo-seccion">La sazón del norte del Estado de México en su máxima expresión. Haz clic en cualquier platillo para explorar su galería fotográfica.</p>
 
     <div class="cards-grid">
-      <article class="card">
-        <img src="img/barbacoa.jpg" alt="Barbacoa de Borrego en Horno de Tierra - Jilotepec" title="Clic para ampliar imagen">
+      <article class="card" data-galeria="barbacoa">
+        <img src="img/barbacoa.jpg" alt="Barbacoa de Borrego en Horno de Tierra - Jilotepec" title="Haz clic para ver la galería completa">
         <div class="card-body">
           <span class="food-badge">Especialidad Local</span>
           <h3>Barbacoa de Borrego en Horno de Tierra</h3>
@@ -163,8 +209,8 @@
         </div>
       </article>
 
-      <article class="card">
-        <img src="img/carnitas.jpg" alt="Carnitas estilo Jilotepec y Chicharrón" title="Clic para ampliar imagen">
+      <article class="card" data-galeria="carnitas">
+        <img src="img/carnitas.jpg" alt="Carnitas estilo Jilotepec y Chicharrón" title="Haz clic para ver la galería completa">
         <div class="card-body">
           <span class="food-badge">Tradición Regional</span>
           <h3>Carnitas estilo Jilotepec y Chicharrón</h3>
@@ -172,8 +218,8 @@
         </div>
       </article>
 
-      <article class="card">
-        <img src="img/trucha.jpg" alt="Carpa y Trucha Preparada a orillas de la Presa Danxhó" title="Clic para ampliar imagen">
+      <article class="card" data-galeria="trucha">
+        <img src="img/trucha.jpg" alt="Carpa y Trucha Preparada a orillas de la Presa Danxhó" title="Haz clic para ver la galería completa">
         <div class="card-body">
           <span class="food-badge">Especialidad de la Presa</span>
           <h3>Carpa y Trucha Preparada</h3>
@@ -189,8 +235,8 @@
       <p class="subtitulo-seccion">Delicias tradicionales para endulzar y brindar en Jilotepec.</p>
 
       <div class="cards-grid">
-        <article class="card">
-          <img src="img/pulque.jpg" alt="Pulque Tradicional y Curados de Jilotepec" title="Clic para ampliar imagen">
+        <article class="card" data-galeria="pulque">
+          <img src="img/pulque.jpg" alt="Pulque Tradicional y Curados de Jilotepec" title="Haz clic para ver la galería completa">
           <div class="card-body">
             <span class="food-badge">Bebida Ancestral</span>
             <h3>Pulque Tradicional y Curados</h3>
@@ -198,8 +244,8 @@
           </div>
         </article>
 
-        <article class="card">
-          <img src="img/pan.jpg" alt="Pan de Pulque y Repostería Artesanal" title="Clic para ampliar imagen">
+        <article class="card" data-galeria="pan">
+          <img src="img/pan.jpg" alt="Pan de Pulque y Repostería Artesanal" title="Haz clic para ver la galería completa">
           <div class="card-body">
             <span class="food-badge">Horno Tradicional</span>
             <h3>Pan de Pulque y Repostería</h3>
@@ -207,8 +253,8 @@
           </div>
         </article>
 
-        <article class="card">
-          <img src="img/dulces.jpg" alt="Jamoncillos y Dulces Típicos en Conserva" title="Clic para ampliar imagen">
+        <article class="card" data-galeria="dulces">
+          <img src="img/dulces.jpg" alt="Jamoncillos y Dulces Típicos en Conserva" title="Haz clic para ver la galería completa">
           <div class="card-body">
             <span class="food-badge">Dulce Herencia</span>
             <h3>Jamoncillos y Dulces Típicos</h3>
@@ -222,8 +268,11 @@
   <div id="modalVisor" class="modal-visor" role="dialog" aria-hidden="true">
     <div class="modal-contenido-wrapper">
       <span class="modal-cerrar" id="btnCerrarModal">&times;</span>
+      <button class="modal-nav-btn modal-prev" id="btnPrevModal">&#10094;</button>
+      <button class="modal-nav-btn modal-next" id="btnNextModal">&#10095;</button>
       <img id="imgModal" class="modal-imagen" src="" alt="Imagen ampliada">
       <div id="captionModal" class="modal-caption"></div>
+      <div id="counterModal" class="modal-counter"></div>
     </div>
   </div>
 
@@ -289,19 +338,93 @@
       ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
     });
 
+    const galerias = {
+      dulces: [
+        { url: 'img/dulces.jpg', titulo: 'Jamoncillos de Leche y Dulces Artesanales de Jilotepec' },
+        { url: 'https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=1200&q=80', titulo: 'Dulces Típicos Mexicanos y Alegrías de Amaranto' },
+        { url: 'https://images.unsplash.com/photo-1514517521153-1be72277b32f?auto=format&fit=crop&w=1200&q=80', titulo: 'Ate de Membrillo y Frutas Tradicionales en Conserva' },
+        { url: 'https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=1200&q=80', titulo: 'Palanquetas de Cacahuate y Dulces de Semillas' }
+      ],
+      barbacoa: [
+        { url: 'img/barbacoa.jpg', titulo: 'Barbacoa Tradicional en Horno de Tierra' },
+        { url: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80', titulo: 'Consomé de Borrego con Garbanzos y Tortillas Calientes' },
+        { url: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1200&q=80', titulo: 'Pencas de Maguey Horneadas para Barbacoa' }
+      ],
+      carnitas: [
+        { url: 'img/carnitas.jpg', titulo: 'Carnitas de Cerdo estilo Jilotepec y Chicharrón' },
+        { url: 'https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?auto=format&fit=crop&w=1200&q=80', titulo: 'Tacos de Carnitas con Salsa Molcajeteada y Cilantro' }
+      ],
+      trucha: [
+        { url: 'img/trucha.jpg', titulo: 'Carpa y Trucha Preparada a orillas de la Presa Danxhó' },
+        { url: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1200&q=80', titulo: 'Trucha al Mojo de Ajo con Guarnición de Ensalada y Arroz' }
+      ],
+      pulque: [
+        { url: 'img/pulque.jpg', titulo: 'Pulque Tradicional y Curados de Maguey' },
+        { url: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1200&q=80', titulo: 'Extracción Ancestral de Aguamiel en Campos de Maguey' }
+      ],
+      pan: [
+        { url: 'img/pan.jpg', titulo: 'Pan de Pulque y Repostería de Horno de Bóveda' },
+        { url: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80', titulo: 'Gorditas de Horno y Repostería Tradicional' }
+      ]
+    };
+
+    let galeriaActual = [];
+    let indiceActual = 0;
+
     const modalVisor = document.getElementById('modalVisor');
     const imgModal = document.getElementById('imgModal');
     const captionModal = document.getElementById('captionModal');
+    const counterModal = document.getElementById('counterModal');
     const btnCerrarModal = document.getElementById('btnCerrarModal');
+    const btnPrevModal = document.getElementById('btnPrevModal');
+    const btnNextModal = document.getElementById('btnNextModal');
 
-    document.querySelectorAll('.card img').forEach(img => {
-      img.addEventListener('click', function() {
-        modalVisor.style.display = 'block';
-        imgModal.src = this.src;
-        captionModal.textContent = this.alt;
-        document.body.style.overflow = 'hidden';
+    function actualizarModal() {
+      imgModal.style.opacity = '0.3';
+      setTimeout(() => {
+        const item = galeriaActual[indiceActual];
+        imgModal.src = item.url;
+        captionModal.textContent = item.titulo;
+        counterModal.textContent = `IMAGEN ${indiceActual + 1} DE ${galeriaActual.length}`;
+        imgModal.style.opacity = '1';
+      }, 150);
+
+      if (galeriaActual.length > 1) {
+        btnPrevModal.style.display = 'flex';
+        btnNextModal.style.display = 'flex';
+      } else {
+        btnPrevModal.style.display = 'none';
+        btnNextModal.style.display = 'none';
+      }
+    }
+
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', function() {
+        const clave = this.getAttribute('data-galeria');
+        if (galerias[clave]) {
+          galeriaActual = galerias[clave];
+          indiceActual = 0;
+          modalVisor.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+          actualizarModal();
+        }
       });
     });
+
+    function siguienteImagen() {
+      if (galeriaActual.length === 0) return;
+      indiceActual = (indiceActual + 1) % galeriaActual.length;
+      actualizarModal();
+    }
+
+    function anteriorImagen() {
+      if (galeriaActual.length === 0) return;
+      indiceActual = (indiceActual - 1 + galeriaActual.length) % galeriaActual.length;
+      actualizarModal();
+    }
+
+    btnNextModal.addEventListener('click', (e) => { e.stopPropagation(); siguienteImagen(); });
+    btnPrevModal.addEventListener('click', (e) => { e.stopPropagation(); anteriorImagen(); });
 
     function cerrarModal() {
       modalVisor.style.display = 'none';
@@ -317,8 +440,10 @@
     });
 
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modalVisor.style.display === 'block') {
-        cerrarModal();
+      if (modalVisor.style.display === 'block') {
+        if (e.key === 'Escape') cerrarModal();
+        if (e.key === 'ArrowRight') siguienteImagen();
+        if (e.key === 'ArrowLeft') anteriorImagen();
       }
     });
   </script>
