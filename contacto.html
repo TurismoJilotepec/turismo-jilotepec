@@ -332,36 +332,26 @@
   </footer>
 
   <script>
-    // 1. HEADER AUTO-OCULTABLE EN SCROLL
     let ultimoScroll = 0;
     const header = document.querySelector('.header');
-
     window.addEventListener('scroll', () => {
       const scrollActual = window.pageYOffset || document.documentElement.scrollTop;
-
       if (scrollActual > ultimoScroll && scrollActual > 100) {
         header.classList.add('header-oculto');
       } else {
         header.classList.remove('header-oculto');
       }
-
       ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
     });
 
-    // 2. ENVÍO LIMPcalendar O Y FORMATEADO A WHATSAPP
     document.getElementById('formContacto').addEventListener('submit', function(e) {
       e.preventDefault();
-
-      // Cambia este número por el número real (incluyendo el 52 de México + 10 dígitos)
       const numeroWhatsApp = "525611861753"; 
-
       const nombre = document.getElementById('nombre').value.trim();
       const email = document.getElementById('email').value.trim();
       const telefono = document.getElementById('telefono').value.trim() || "No proporcionado";
       const tipo = document.getElementById('tipo').value;
       const mensaje = document.getElementById('mensaje').value.trim();
-
-      // Mensaje estructurado limpio y profesional
       const textoMensaje = `*DIRECCIÓN DE TURISMO JILOTEPEC*\n` +
                            `*Atención Ciudadana y Buzón de Sugerencias*\n\n` +
                            `• *Tipo de mensaje:* ${tipo}\n` +
@@ -369,13 +359,9 @@
                            `• *Correo:* ${email}\n` +
                            `• *Teléfono:* ${telefono}\n\n` +
                            `• *Mensaje / Detalle:*\n${mensaje}`;
-
-      // Encriptación correcta del enlace sin rombos ni símbolos extraños
       const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensaje)}`;
-
       window.open(urlWhatsApp, '_blank');
     });
   </script>
-
 </body>
 </html>
