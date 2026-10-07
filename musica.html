@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gastronomía Tradicional | Turismo Jilotepec</title>
+  <title>Música y Talento Local | Turismo Jilotepec</title>
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="estilos.css?v=3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
   <style>
-    .food-badge {
+    .music-badge {
       display: inline-block;
       padding: 4px 12px;
       border-radius: 20px;
@@ -34,6 +34,29 @@
     .card img:hover {
       transform: scale(1.03);
       filter: brightness(1.05);
+    }
+
+    .btn-contratar {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-contratar:hover {
+      background: linear-gradient(135deg, #20ba5a 0%, #0e7065 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
     }
 
     .modal-visor {
@@ -174,8 +197,8 @@
         <a href="index.html" class="nav-link">Inicio</a>
         <a href="atractivos.html" class="nav-link">Atractivos</a>
         <a href="eventos.html" class="nav-link">Eventos y Ferias</a>
-        <a href="gastronomia.html" class="nav-link active">Gastronomía</a>
-        <a href="musica.html" class="nav-link">Música Local</a>
+        <a href="gastronomia.html" class="nav-link">Gastronomía</a>
+        <a href="musica.html" class="nav-link active">Música Local</a>
         <a href="contacto.html" class="nav-link">Contacto</a>
       </nav>
 
@@ -191,78 +214,54 @@
       <div class="hero-badge">
         <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="hero-pm-logo">
       </div>
-      <h1>Sazones y Tradición Gastronómica</h1>
-      <p>Descubre la riqueza culinaria de Jilotepec: desde la ancestral barbacoa de hoyo hasta el pulque artesanal y los dulces típicos.</p>
+      <h1>Música y Talento Regional</h1>
+      <p>Conoce la riqueza musical de Jilotepec: mariachis, bandas de viento, grupos norteños, música versátil y agrupaciones tradicionales que amenizan nuestras fiestas comunitarias.</p>
     </div>
   </section>
 
   <section class="seccion container">
-    <h2 class="titulo-seccion">Platillos Emblemáticos</h2>
-    <p class="subtitulo-seccion">La sazón del norte del Estado de México en su máxima expresión. Haz clic en cualquier platillo para explorar su galería fotográfica.</p>
+    <h2 class="titulo-seccion">Agrupaciones Tradicionales y Populares</h2>
+    <p class="subtitulo-seccion">Impulsamos el talento artístico de nuestro municipio. Haz clic en la imagen de cada agrupación para ver su galería.</p>
 
     <div class="cards-grid">
-      <article class="card" data-galeria="barbacoa">
-        <img src="img/barbacoa.jpg" alt="Barbacoa de Borrego en Horno de Tierra - Jilotepec" title="Haz clic para ver la galería completa">
+      <article class="card" data-galeria="mariachi">
+        <img src="img/mariachi.jpg" alt="Mariachi de Jilotepec" title="Haz clic para ver más fotografías">
         <div class="card-body">
-          <span class="food-badge">Especialidad Local</span>
-          <h3>Barbacoa de Borrego en Horno de Tierra</h3>
-          <p>Preparada de manera ancestral envuelta en pencas de maguey y cocida a fuego lento bajo tierra. Acompañada de su tradicional consomé con garbanzos y tortillas hechas a mano.</p>
+          <span class="music-badge">Música Tradicional</span>
+          <h3>Mariachis Regionales</h3>
+          <p>Música ranchera y sones tradicionales para serenatas, bodas, fiestas patronales y eventos especiales en todo el municipio de Jilotepec.</p>
+          <a href="https://wa.me/527610000000?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informes%20para%20contratar%20un%20Mariachi%20Local" target="_blank" class="btn-contratar">
+            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+            Solicitar Informes
+          </a>
         </div>
       </article>
 
-      <article class="card" data-galeria="carnitas">
-        <img src="img/carnitas.jpg" alt="Carnitas estilo Jilotepec y Chicharrón" title="Haz clic para ver la galería completa">
+      <article class="card" data-galeria="banda">
+        <img src="img/banda.jpg" alt="Banda de Viento de Jilotepec" title="Haz clic para ver más fotografías">
         <div class="card-body">
-          <span class="food-badge">Tradición Regional</span>
-          <h3>Carnitas estilo Jilotepec y Chicharrón</h3>
-          <p>Jugosas carnitas de cerdo preparadas en cazo de cobre y chicharrón crujiente, servidos con salsas molcajeteadas verdes y rojas, nopales y aguacate fresco.</p>
+          <span class="music-badge">Fiesta Patronal</span>
+          <h3>Bandas de Viento</h3>
+          <p>Agrupaciones de metales y percusiones encargadas de alegrar las procesiones, ferias comunales y festejos tradicionales de la región.</p>
+          <a href="https://wa.me/527610000000?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informes%20para%20contratar%20una%20Banda%20de%20Viento" target="_blank" class="btn-contratar">
+            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+            Solicitar Informes
+          </a>
         </div>
       </article>
 
-      <article class="card" data-galeria="trucha">
-        <img src="img/trucha.jpg" alt="Carpa y Trucha Preparada a orillas de la Presa Danxhó" title="Haz clic para ver la galería completa">
+      <article class="card" data-galeria="norteno">
+        <img src="img/norteno.jpg" alt="Grupo Norteño de Jilotepec" title="Haz clic para ver más fotografías">
         <div class="card-body">
-          <span class="food-badge">Especialidad de la Presa</span>
-          <h3>Carpa y Trucha Preparada</h3>
-          <p>Pescado fresco de la región cocinado al gusto: frita al mojo de ajo, a la diabla, empapelada con hierbas de olor o en caldo, típico para disfrutar a orillas de la Presa Danxhó.</p>
+          <span class="music-badge">Música Popular</span>
+          <h3>Grupos Norteños y Tropicales</h3>
+          <p>Acordeón, bajo sexto y ritmo bailable para amenizar festejos familiares, rodeos y jaripeos tradicionales de Jilotepec.</p>
+          <a href="https://wa.me/527610000000?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informes%20para%20contratar%20un%20Grupo%20Norte%C3%B1o" target="_blank" class="btn-contratar">
+            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+            Solicitar Informes
+          </a>
         </div>
       </article>
-    </div>
-  </section>
-
-  <section class="seccion bg-gris">
-    <div class="container">
-      <h2 class="titulo-seccion">Bebidas y Repostería Artesanal</h2>
-      <p class="subtitulo-seccion">Delicias tradicionales para endulzar y brindar en Jilotepec.</p>
-
-      <div class="cards-grid">
-        <article class="card" data-galeria="pulque">
-          <img src="img/pulque.jpg" alt="Pulque Tradicional y Curados de Jilotepec" title="Haz clic para ver la galería completa">
-          <div class="card-body">
-            <span class="food-badge">Bebida Ancestral</span>
-            <h3>Pulque Tradicional y Curados</h3>
-            <p>Conocido como el "manjar de los dioses", elaborado a partir del aguamiel del maguey pulquero. Disfruta del pulque natural o de variados curados de piñón, guayaba y ocharo.</p>
-          </div>
-        </article>
-
-        <article class="card" data-galeria="pan">
-          <img src="img/pan.jpg" alt="Pan de Pulque y Repostería Artesanal" title="Haz clic para ver la galería completa">
-          <div class="card-body">
-            <span class="food-badge">Horno Tradicional</span>
-            <h3>Pan de Pulque y Repostería</h3>
-            <p>Piezas de pan artesanal fermentadas con pulque y horneadas en hornos de bóveda. Destacan las gorditas de horno, la repostería fina y las cemas tradicionales.</p>
-          </div>
-        </article>
-
-        <article class="card" data-galeria="dulces">
-          <img src="img/dulces.jpg" alt="Jamoncillos y Dulces Típicos en Conserva" title="Haz clic para ver la galería completa">
-          <div class="card-body">
-            <span class="food-badge">Dulce Herencia</span>
-            <h3>Jamoncillos y Dulces Típicos</h3>
-            <p>Exquisitos jamoncillos de leche, ate de membrillo, frutas en conserva, alegrías de amaranto y palanquetas elaboradas artesanalmente por familias locales.</p>
-          </div>
-        </article>
-      </div>
     </div>
   </section>
 
@@ -293,6 +292,7 @@
           <li><a href="atractivos.html">Atractivos Turísticos</a></li>
           <li><a href="eventos.html">Eventos y Ferias</a></li>
           <li><a href="gastronomia.html">Gastronomía</a></li>
+          <li><a href="musica.html">Música Local</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
@@ -324,7 +324,6 @@
   </footer>
 
   <script>
-    // 1. HEADER AUTO-OCULTABLE EN SCROLL
     let ultimoScroll = 0;
     const header = document.querySelector('.header');
 
@@ -340,33 +339,19 @@
       ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
     });
 
-    // 2. GALERÍAS 100% LOCALES CON TUS FOTOGRAFÍAS DE LA CARPETA img/
+    // Galerías de fotos locales en la carpeta img/
     const galerias = {
-      dulces: [
-        { url: 'img/dulces.jpg', titulo: 'Jamoncillos de Leche y Dulces Tradicionales de Jilotepec' },
-        { url: 'img/dulces 2.jpg', titulo: 'Puesto Tradicional de Dulces, Conservas y Fruta' },
-        { url: 'img/dulces 3.jpg', titulo: 'Alegrías, Palanquetas y Dulces de Semillas' }
+      mariachi: [
+        { url: 'img/mariachi.jpg', titulo: 'Mariachis Tradicionales de Jilotepec' },
+        { url: 'img/mariachi2.jpg', titulo: 'Presentaciones en Festivales y Festejos Locales' }
       ],
-      barbacoa: [
-        { url: 'img/barbacoa.jpg', titulo: 'Barbacoa Tradicional de Borrego en Horno de Tierra' },
-        { url: 'img/barbacoa 2.jpg', titulo: 'Consomé con Garbanzos y Platillos Tradicionales' },
-        { url: 'img/barbacoa 3.jpg', titulo: 'Tacos de Barbacoa y Tortillas Hechas a Mano' }
+      banda: [
+        { url: 'img/banda.jpg', titulo: 'Banda de Viento Tradicional' },
+        { url: 'img/banda2.jpg', titulo: 'Acompañamiento en Procesiones y Ferias Patronales' }
       ],
-      carnitas: [
-        { url: 'img/carnitas.jpg', titulo: 'Carnitas estilo Jilotepec y Chicharrón Crujiente' },
-        { url: 'img/carnitas 2.jpg', titulo: 'Tacos de Carnitas con Salsas Molcajeteadas' }
-      ],
-      trucha: [
-        { url: 'img/trucha.jpg', titulo: 'Carpa y Trucha Preparada a orillas de la Presa Danxhó' },
-        { url: 'img/trucha 2.jpg', titulo: 'Especialidades de Pescado Frito y al Mojo de Ajo' }
-      ],
-      pulque: [
-        { url: 'img/pulque.jpg', titulo: 'Pulque Tradicional y Curados de Maguey' },
-        { url: 'img/pulque 2.jpg', titulo: 'Maguey Pulquero y Producción Artesanal en Jilotepec' }
-      ],
-      pan: [
-        { url: 'img/pan.jpg', titulo: 'Pan de Pulque y Repostería de Horno de Bóveda' },
-        { url: 'img/pan 2.jpg', titulo: 'Gorditas de Horno y Repostería Tradicional' }
+      norteno: [
+        { url: 'img/norteno.jpg', titulo: 'Grupo Norteño y Tropical de la Región' },
+        { url: 'img/norteno2.jpg', titulo: 'Música en Vivo para Fiestas Populares' }
       ]
     };
 
@@ -401,7 +386,9 @@
     }
 
     document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('click', function() {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('.btn-contratar')) return; // Evita abrir el modal al dar clic al botón WhatsApp
+        
         const clave = this.getAttribute('data-galeria');
         if (galerias[clave]) {
           galeriaActual = galerias[clave];
@@ -449,5 +436,6 @@
       }
     });
   </script>
+
 </body>
 </html>
