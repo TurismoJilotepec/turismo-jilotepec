@@ -3,24 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gastronomía | Turismo Jilotepec</title>
+  <title>Gastronomía Tradicional | Turismo Jilotepec</title>
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="estilos.css?v=3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
   <style>
-    .gastro-tag {
+    .food-badge {
       display: inline-block;
       padding: 4px 12px;
-      background-color: #f4ece1;
-      color: #7a101c;
+      border-radius: 20px;
       font-size: 0.75rem;
       font-weight: 700;
-      border-radius: 15px;
-      margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      background-color: #f4e8c1;
+      color: #7a101c;
+    }
+
+    .card img {
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .card img:hover {
+      transform: scale(1.03);
+      filter: brightness(1.05);
+    }
+
+    .modal-visor {
+      display: none;
+      position: fixed;
+      z-index: 99999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(6px);
+      animation: fadeInModal 0.25s ease-out;
+    }
+
+    @keyframes fadeInModal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-contenido-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .modal-imagen {
+      max-width: 90%;
+      max-height: 82vh;
+      border-radius: 8px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+      object-fit: contain;
+      user-select: none;
+    }
+
+    .modal-caption {
+      margin-top: 15px;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      max-width: 80%;
+    }
+
+    .modal-cerrar {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #ffffff;
+      font-size: 38px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: color 0.2s ease, transform 0.2s ease;
+      line-height: 1;
+      z-index: 100000;
+      background: rgba(0,0,0,0.4);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-cerrar:hover {
+      color: #ff4d4d;
+      transform: scale(1.1);
+      background: rgba(0,0,0,0.7);
     }
   </style>
 </head>
@@ -56,38 +144,38 @@
       <div class="hero-badge">
         <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="hero-pm-logo">
       </div>
-      <h1>Gastronomía Tradicional</h1>
-      <p>Sabor, herencia y tradición culinaria que cautivan el paladar de locales y visitantes.</p>
+      <h1>Sazones y Tradición Gastronómica</h1>
+      <p>Descubre la riqueza culinaria de Jilotepec: desde la ancestral barbacoa de hoyo hasta el pulque artesanal y la fresca carpa de nuestras presas.</p>
     </div>
   </section>
 
   <section class="seccion container">
     <h2 class="titulo-seccion">Platillos Emblemáticos</h2>
-    <p class="subtitulo-seccion">La sazón del norte del Estado de México en su máxima expresión.</p>
+    <p class="subtitulo-seccion">La sazón del norte del Estado de México en su máxima expresión. Haz clic en cualquier platillo para ver la imagen completa.</p>
 
     <div class="cards-grid">
       <article class="card">
-        <img src="img/barbacoa.jpg" alt="Barbacoa de Borrego">
+        <img src="img/barbacoa.jpg" alt="Barbacoa de Borrego en Horno de Tierra - Jilotepec" title="Clic para ampliar imagen">
         <div class="card-body">
-          <span class="gastro-tag">Especialidad Local</span>
+          <span class="food-badge">Especialidad Local</span>
           <h3>Barbacoa de Borrego en Horno de Tierra</h3>
           <p>Preparada de manera ancestral envuelta en pencas de maguey y cocida a fuego lento bajo tierra. Acompañada de su tradicional consomé con garbanzos y tortillas hechas a mano.</p>
         </div>
       </article>
 
       <article class="card">
-        <img src="img/carnitas.jpg" alt="Carnitas y Chicharrón">
+        <img src="img/carnitas.jpg" alt="Carnitas estilo Jilotepec y Chicharrón" title="Clic para ampliar imagen">
         <div class="card-body">
-          <span class="gastro-tag">Tradición Regional</span>
+          <span class="food-badge">Tradición Regional</span>
           <h3>Carnitas estilo Jilotepec y Chicharrón</h3>
           <p>Jugosas carnitas de cerdo preparadas en cazo de cobre y chicharrón crujiente, servidos con salsas molcajeteadas verdes y rojas, nopales y aguacate fresco.</p>
         </div>
       </article>
 
       <article class="card">
-        <img src="img/carpa-trucha.jpg" alt="Carpa y Trucha de la Región">
+        <img src="img/trucha.jpg" alt="Carpa y Trucha Preparada a orillas de la Presa Danxhó" title="Clic para ampliar imagen">
         <div class="card-body">
-          <span class="gastro-tag">Especialidad de la Presa</span>
+          <span class="food-badge">Especialidad de la Presa</span>
           <h3>Carpa y Trucha Preparada</h3>
           <p>Pescado fresco de la región cocinado al gusto: frita al mojo de ajo, a la diabla, empapelada con hierbas de olor o en caldo, típico para disfrutar a orillas de la Presa Danxhó.</p>
         </div>
@@ -102,27 +190,27 @@
 
       <div class="cards-grid">
         <article class="card">
-          <img src="img/pulque.jpg" alt="Pulque y Curados">
+          <img src="img/pulque.jpg" alt="Pulque Tradicional y Curados de Jilotepec" title="Clic para ampliar imagen">
           <div class="card-body">
-            <span class="gastro-tag">Bebida Ancestral</span>
+            <span class="food-badge">Bebida Ancestral</span>
             <h3>Pulque Tradicional y Curados</h3>
             <p>Conocido como el "manjar de los dioses", elaborado a partir del aguamiel del maguey pulquero. Disfruta del pulque natural o de variados curados de piñón, guayaba y ocharo.</p>
           </div>
         </article>
 
         <article class="card">
-          <img src="img/pan-artesanal.jpg" alt="Pan Artesanal de Pulque">
+          <img src="img/pan.jpg" alt="Pan de Pulque y Repostería Artesanal" title="Clic para ampliar imagen">
           <div class="card-body">
-            <span class="gastro-tag">Horno Tradicional</span>
+            <span class="food-badge">Horno Tradicional</span>
             <h3>Pan de Pulque y Repostería</h3>
             <p>Piezas de pan artesanal fermentadas con pulque y horneadas en hornos de bóveda. Destacan las gorditas de horno, la repostería fina y las cemas tradicionales.</p>
           </div>
         </article>
 
         <article class="card">
-          <img src="img/dulces-tradicionales.jpg" alt="Dulces Típicos y Conservas">
+          <img src="img/dulces.jpg" alt="Jamoncillos y Dulces Típicos en Conserva" title="Clic para ampliar imagen">
           <div class="card-body">
-            <span class="gastro-tag">Dulce Herencia</span>
+            <span class="food-badge">Dulce Herencia</span>
             <h3>Jamoncillos y Dulces Típicos</h3>
             <p>Exquisitos jamoncillos de leche, ate de membrillo, frutas en conserva, alegrías de amaranto y palanquetas elaboradas artesanalmente por familias locales.</p>
           </div>
@@ -130,6 +218,14 @@
       </div>
     </div>
   </section>
+
+  <div id="modalVisor" class="modal-visor" role="dialog" aria-hidden="true">
+    <div class="modal-contenido-wrapper">
+      <span class="modal-cerrar" id="btnCerrarModal">&times;</span>
+      <img id="imgModal" class="modal-imagen" src="" alt="Imagen ampliada">
+      <div id="captionModal" class="modal-caption"></div>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container footer-grid">
@@ -191,6 +287,39 @@
       }
 
       ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
+    });
+
+    const modalVisor = document.getElementById('modalVisor');
+    const imgModal = document.getElementById('imgModal');
+    const captionModal = document.getElementById('captionModal');
+    const btnCerrarModal = document.getElementById('btnCerrarModal');
+
+    document.querySelectorAll('.card img').forEach(img => {
+      img.addEventListener('click', function() {
+        modalVisor.style.display = 'block';
+        imgModal.src = this.src;
+        captionModal.textContent = this.alt;
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function cerrarModal() {
+      modalVisor.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    btnCerrarModal.addEventListener('click', cerrarModal);
+
+    modalVisor.addEventListener('click', function(e) {
+      if (e.target === modalVisor || e.target.classList.contains('modal-contenido-wrapper')) {
+        cerrarModal();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modalVisor.style.display === 'block') {
+        cerrarModal();
+      }
     });
   </script>
 
