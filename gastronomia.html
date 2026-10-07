@@ -323,6 +323,7 @@
   </footer>
 
   <script>
+    // 1. HEADER AUTO-OCULTABLE EN SCROLL
     let ultimoScroll = 0;
     const header = document.querySelector('.header');
 
@@ -338,32 +339,33 @@
       ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
     });
 
+    // 2. GALERÍAS 100% LOCALES CON TUS FOTOGRAFÍAS DE LA CARPETA img/
     const galerias = {
       dulces: [
-        { url: 'img/dulces.jpg', titulo: 'Jamoncillos de Leche y Dulces Artesanales de Jilotepec' },
-        { url: 'https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=1200&q=80', titulo: 'Dulces Típicos y Confitería Artesanal' },
-        { url: 'https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=1200&q=80', titulo: 'Alegrías de Amaranto y Dulces Tradicionales' }
+        { url: 'img/dulces.jpg', titulo: 'Jamoncillos de Leche y Dulces Tradicionales de Jilotepec' },
+        { url: 'img/dulces 2.jpg', titulo: 'Puesto Tradicional de Dulces, Conservas y Fruta' },
+        { url: 'img/dulces 3.jpg', titulo: 'Alegrías, Palanquetas y Dulces de Semillas' }
       ],
       barbacoa: [
         { url: 'img/barbacoa.jpg', titulo: 'Barbacoa Tradicional de Borrego en Horno de Tierra' },
-        { url: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1200&q=80', titulo: 'Tacos de Barbacoa con Salsa Borracha y Consomé' },
-        { url: 'https://images.unsplash.com/photo-1613514785940-daed07799d9b?auto=format&fit=crop&w=1200&q=80', titulo: 'Platillo Tradicional con Tortillas Hechas a Mano' }
+        { url: 'img/barbacoa 2.jpg', titulo: 'Consomé con Garbanzos y Platillos Tradicionales' },
+        { url: 'img/barbacoa 3.jpg', titulo: 'Tacos de Barbacoa y Tortillas Hechas a Mano' }
       ],
       carnitas: [
         { url: 'img/carnitas.jpg', titulo: 'Carnitas estilo Jilotepec y Chicharrón Crujiente' },
-        { url: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1200&q=80', titulo: 'Tacos de Carnitas con Salsa Verde Molcajeteada y Nopales' }
+        { url: 'img/carnitas 2.jpg', titulo: 'Tacos de Carnitas con Salsas Molcajeteadas' }
       ],
       trucha: [
         { url: 'img/trucha.jpg', titulo: 'Carpa y Trucha Preparada a orillas de la Presa Danxhó' },
-        { url: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1200&q=80', titulo: 'Pescado Frito al Mojo de Ajo con Guarnición Tradicional' }
+        { url: 'img/trucha 2.jpg', titulo: 'Especialidades de Pescado Frito y al Mojo de Ajo' }
       ],
       pulque: [
         { url: 'img/pulque.jpg', titulo: 'Pulque Tradicional y Curados de Maguey' },
-        { url: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1200&q=80', titulo: 'Cultura del Maguey Pulquero en el Estado de México' }
+        { url: 'img/pulque 2.jpg', titulo: 'Maguey Pulquero y Producción Artesanal en Jilotepec' }
       ],
       pan: [
-        { url: 'img/pan.jpg', titulo: 'Pan Artesanal de Pulque y Repostería de Horno' },
-        { url: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80', titulo: 'Gorditas de Horno y Cemas Tradicionales' }
+        { url: 'img/pan.jpg', titulo: 'Pan de Pulque y Repostería de Horno de Bóveda' },
+        { url: 'img/pan 2.jpg', titulo: 'Gorditas de Horno y Repostería Tradicional' }
       ]
     };
 
