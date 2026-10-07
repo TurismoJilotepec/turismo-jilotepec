@@ -3,43 +3,379 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sección | Turismo Jilotepec</title>
-  <link rel="stylesheet" href="estilos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>Contacto y Atención Ciudadana | Turismo Jilotepec</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="estilos.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    .contacto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .contacto-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .info-box-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .info-icon {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(135deg, #a71d2a 0%, #7a101c 100%);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(167, 29, 42, 0.25);
+    }
+
+    .info-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    .info-text h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #7a101c;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .info-text p, .info-text a {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+
+    .info-text a:hover {
+      color: #a71d2a;
+      text-decoration: underline;
+    }
+
+    .form-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eee;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #333;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fcfcfc;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #a71d2a;
+      box-shadow: 0 0 0 4px rgba(167, 29, 42, 0.12);
+      background-color: #ffffff;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn-submit-ws {
+      width: 100%;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-submit-ws:hover {
+      background: linear-gradient(135deg, #20ba5a 0%, #0e7065 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(37, 211, 102, 0.42);
+    }
+  </style>
 </head>
 <body>
 
   <header class="header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">
-        <span class="logo-titulo">JILOTEPEC</span>
-        <span class="logo-subtitulo">PUEBLO MÁGICO</span>
-      </a>
+    <div class="container header-container">
+      <div class="brand-box">
+        <img src="img/logo-gobierno.jpg" alt="Gobierno Jilotepec" class="header-logo">
+        <div class="brand-text">
+          <span class="brand-title">JILOTEPEC</span>
+          <span class="brand-sub">PUEBLO MÁGICO • TURISMO</span>
+        </div>
+      </div>
+
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Inicio</a>
         <a href="atractivos.html" class="nav-link">Atractivos</a>
         <a href="eventos.html" class="nav-link">Eventos y Ferias</a>
         <a href="gastronomia.html" class="nav-link">Gastronomía</a>
-        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="contacto.html" class="nav-link active">Contacto</a>
       </nav>
+
+      <div class="header-turismo-logos">
+        <img src="img/logo-mexico.png" alt="Visita México" class="header-logo-mexico">
+      </div>
     </div>
   </header>
 
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <div class="hero-badge">
+        <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="hero-pm-logo">
+      </div>
+      <h1>Contacto y Atención Ciudadana</h1>
+      <p>Estamos para servirte. Contáctanos directamente o envíanos tus comentarios, quejas o sugerencias vía WhatsApp para atención inmediata.</p>
+    </div>
+  </section>
+
   <section class="seccion container">
-    <h1 class="titulo-seccion">Sección en Construcción</h1>
-    <p class="subtitulo-seccion">Estamos preparando la mejor información para ti.</p>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+    <div class="contacto-grid">
+      <div class="info-box-card">
+        <div>
+          <h3 style="font-family: 'Playfair Display', serif; color: #7a101c; font-size: 1.6rem; margin-bottom: 10px;">Dirección de Turismo</h3>
+          <p style="color: #666; font-size: 0.95rem;">H. Ayuntamiento Constitucional de Jilotepec, Estado de México.</p>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="info-text">
+            <h4>Ubicación Oficial</h4>
+            <p>Palacio Municipal s/n, Col. Centro, C.P. 54240, Jilotepec, Estado de México.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div class="info-text">
+            <h4>Teléfono de Atención</h4>
+            <p><a href="tel:7617340000">(761) 734 0000</a></p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div class="info-text">
+            <h4>Correo Electrónico</h4>
+            <p><a href="mailto:turismo@jilotepec.gob.mx">turismo@jilotepec.gob.mx</a></p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <div class="info-text">
+            <h4>Horarios de Atención</h4>
+            <p>Lunes a Viernes: 09:00 AM – 05:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3 style="font-family: 'Playfair Display', serif; color: #7a101c; font-size: 1.6rem; margin-bottom: 8px;">Buzón de Quejas y Sugerencias</h3>
+        <p style="color: #666; font-size: 0.9rem; margin-bottom: 25px;">Llena este formulario para enviar tu reporte o comentario directamente al WhatsApp del área de Turismo.</p>
+
+        <form id="formContacto">
+          <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej. Juan Pérez" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="ejemplo@correo.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono (Opcional)</label>
+            <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="(761) 000 0000">
+          </div>
+
+          <div class="form-group">
+            <label for="tipo">Tipo de Mensaje</label>
+            <select id="tipo" name="tipo" class="form-control" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="Sugerencia">Sugerencia</option>
+              <option value="Queja o Reporte">Queja o Reporte</option>
+              <option value="Solicitud de Información">Solicitud de Información Turística</option>
+              <option value="Reconocimiento / Felicitación">Reconocimiento / Felicitación</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Escribe aquí tu comentario, reporte o sugerencia con el mayor detalle posible..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-ws">
+            <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.69 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.17 8.17 0 0 1-5.82 2.42c-1.42 0-2.82-.37-4.06-1.09l-.29-.17-3.02.79.81-2.95-.19-.3A8.188 8.188 0 0 1 3.8 11.91c0-4.55 3.69-8.24 8.25-8.24zm4.52 10.25c-.25-.12-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.12-.17.25-.66.8-.81.97-.15.17-.3.19-.55.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
+            Enviar por WhatsApp
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 
   <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="img/logo-gobierno.jpg" alt="Gobierno Jilotepec" class="footer-logo">
+        <h3>Turismo Jilotepec</h3>
+        <p>H. Ayuntamiento Constitucional de Jilotepec</p>
+        <p class="slogan-footer">"Desarrollo en Armonía"</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="atractivos.html">Atractivos Turísticos</a></li>
+          <li><a href="eventos.html">Eventos y Ferias</a></li>
+          <li><a href="gastronomia.html">Gastronomía</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención Ciudadana</h4>
+        <p><strong>Dirección:</strong> Palacio Municipal s/n, Centro, Jilotepec, Estado de México.</p>
+        <p><strong>Teléfono:</strong> (761) 734 0000</p>
+        <p><strong>Correo:</strong> turismo@jilotepec.gob.mx</p>
+      </div>
+    </div>
+
+    <div class="footer-brand-banner">
+      <div class="container footer-brand-flex">
+        <img src="img/logo-pueblo-magico.png" alt="Pueblo Mágico" class="banner-logo">
+        <img src="img/logo-municipio.png" alt="Municipio" class="banner-logo">
+        <img src="img/logo-mexico.png" alt="Visita México" class="banner-logo">
+      </div>
+    </div>
+
     <div class="footer-bottom">
       <div class="container footer-bottom-flex">
-        <p>&copy; 2026 Dirección de Turismo de Jilotepec.</p>
+        <p>&copy; 2026 Dirección de Turismo de Jilotepec. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Aviso de Privacidad</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    // 1. HEADER AUTO-OCULTABLE EN SCROLL
+    let ultimoScroll = 0;
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+      const scrollActual = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollActual > ultimoScroll && scrollActual > 100) {
+        header.classList.add('header-oculto');
+      } else {
+        header.classList.remove('header-oculto');
+      }
+
+      ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
+    });
+
+    // 2. ENVÍO DIRECTO A WHATSAPP
+    document.getElementById('formContacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // INSTRUCCIÓN: Sustituye el siguiente número por el número de WhatsApp del encargado
+      // (Importante incluir el prefijo de país, ej. 52 para México + los 10 dígitos)
+      const numeroWhatsApp = "525611861753"; 
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefono = document.getElementById('telefono').value.trim() || "No proporcionado";
+      const tipo = document.getElementById('tipo').value;
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      // Formato del mensaje con negritas y saltos de línea para WhatsApp
+      const textoMensaje = `*NUEVO MENSAJE DESDE LA WEB DE TURISMO*%0A%0A` +
+                           `📌 *Tipo de mensaje:* ${encodeURIComponent(tipo)}%0A` +
+                           `👤 *Nombre:* ${encodeURIComponent(nombre)}%0A` +
+                           `✉️ *Correo:* ${encodeURIComponent(email)}%0A` +
+                           `📞 *Teléfono:* ${encodeURIComponent(telefono)}%0A%0A` +
+                           `💬 *Mensaje / Detalle:*%0A${encodeURIComponent(mensaje)}`;
+
+      const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoMensaje}`;
+
+      // Abre WhatsApp en una ventana nueva
+      window.open(urlWhatsApp, '_blank');
+    });
+  </script>
 
 </body>
 </html>
