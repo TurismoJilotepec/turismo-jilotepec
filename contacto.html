@@ -348,12 +348,11 @@
       ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
     });
 
-    // 2. ENVÍO DIRECTO A WHATSAPP
+    // 2. ENVÍO LIMPcalendar O Y FORMATEADO A WHATSAPP
     document.getElementById('formContacto').addEventListener('submit', function(e) {
       e.preventDefault();
 
-      // INSTRUCCIÓN: Sustituye el siguiente número por el número de WhatsApp del encargado
-      // (Importante incluir el prefijo de país, ej. 52 para México + los 10 dígitos)
+      // Cambia este número por el número real (incluyendo el 52 de México + 10 dígitos)
       const numeroWhatsApp = "525611861753"; 
 
       const nombre = document.getElementById('nombre').value.trim();
@@ -362,17 +361,18 @@
       const tipo = document.getElementById('tipo').value;
       const mensaje = document.getElementById('mensaje').value.trim();
 
-      // Formato del mensaje con negritas y saltos de línea para WhatsApp
-      const textoMensaje = `*NUEVO MENSAJE DESDE LA WEB DE TURISMO*%0A%0A` +
-                           `📌 *Tipo de mensaje:* ${encodeURIComponent(tipo)}%0A` +
-                           `👤 *Nombre:* ${encodeURIComponent(nombre)}%0A` +
-                           `✉️ *Correo:* ${encodeURIComponent(email)}%0A` +
-                           `📞 *Teléfono:* ${encodeURIComponent(telefono)}%0A%0A` +
-                           `💬 *Mensaje / Detalle:*%0A${encodeURIComponent(mensaje)}`;
+      // Mensaje estructurado limpio y profesional
+      const textoMensaje = `*DIRECCIÓN DE TURISMO JILOTEPEC*\n` +
+                           `*Atención Ciudadana y Buzón de Sugerencias*\n\n` +
+                           `• *Tipo de mensaje:* ${tipo}\n` +
+                           `• *Nombre:* ${nombre}\n` +
+                           `• *Correo:* ${email}\n` +
+                           `• *Teléfono:* ${telefono}\n\n` +
+                           `• *Mensaje / Detalle:*\n${mensaje}`;
 
-      const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoMensaje}`;
+      // Encriptación correcta del enlace sin rombos ni símbolos extraños
+      const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensaje)}`;
 
-      // Abre WhatsApp en una ventana nueva
       window.open(urlWhatsApp, '_blank');
     });
   </script>
