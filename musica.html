@@ -36,9 +36,10 @@
       filter: brightness(1.05);
     }
 
-    .btn-contratar {
+    .btn-whatsapp-directo {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       margin-top: 15px;
       padding: 10px 20px;
@@ -51,9 +52,10 @@
       text-decoration: none;
       transition: all 0.3s ease;
       box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+      width: calc(100% - 40px);
     }
 
-    .btn-contratar:hover {
+    .btn-whatsapp-directo:hover {
       background: linear-gradient(135deg, #20ba5a 0%, #0e7065 100%);
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
@@ -215,53 +217,61 @@
         <img src="img/logo-pueblo-magico.png" alt="Jilotepec Pueblo Mágico" class="hero-pm-logo">
       </div>
       <h1>Música y Talento Regional</h1>
-      <p>Conoce la riqueza musical de Jilotepec: mariachis, bandas de viento, grupos norteños, música versátil y agrupaciones tradicionales que amenizan nuestras fiestas comunitarias.</p>
+      <p>Directorio de agrupaciones musicales y talento de Jilotepec. Contacta directamente a tus favoritos para amenizar eventos, serenatas y fiestas familiares.</p>
     </div>
   </section>
 
   <section class="seccion container">
-    <h2 class="titulo-seccion">Agrupaciones Tradicionales y Populares</h2>
-    <p class="subtitulo-seccion">Impulsamos el talento artístico de nuestro municipio. Haz clic en la imagen de cada agrupación para ver su galería.</p>
+    <h2 class="titulo-seccion">Agrupaciones Destacadas</h2>
+    <p class="subtitulo-seccion">Haz clic en la imagen para ver la galería fotográfica de cada grupo o pulsa el botón para contactarlos directamente por WhatsApp.</p>
 
     <div class="cards-grid">
+
+      <!-- 1. ADOLFO Y SUS TREMENDOS -->
+      <article class="card" data-galeria="tremendos">
+        <img src="img/tremendos.jpg" alt="Adolfo y sus Tremendos de Saltillo Jilotepec" title="Haz clic para ver la galería de fotos">
+        <div class="card-body">
+          <span class="music-badge">Música Norteña Tradicional</span>
+          <h3>Adolfo y sus Tremendos</h3>
+          <p>Orgullosamente originarios de la comunidad de Saltillo, Jilotepec. Cuenta con una amplia trayectoria interpretando lo mejor de la música norteña, cumbias de acordeón y corridos tradicionales de la región.</p>
+          
+          <a href="https://wa.me/527610000001?text=Hola,%20vi%20su%20contacto%20en%20el%20portal%20de%20Turismo%20Jilotepec%20y%20me%20gustar%C3%ADa%20cotizar%20una%20presentaci%C3%B3n%20de%20Adolfo%20y%20sus%20Tremendos." target="_blank" class="btn-whatsapp-directo">
+            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+            Contactar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- 2. MARIACHI REGIONAL -->
       <article class="card" data-galeria="mariachi">
-        <img src="img/mariachi.jpg" alt="Mariachi de Jilotepec" title="Haz clic para ver más fotografías">
+        <img src="img/mariachi.jpg" alt="Mariachi de Jilotepec" title="Haz clic para ver la galería de fotos">
         <div class="card-body">
-          <span class="music-badge">Música Tradicional</span>
-          <h3>Mariachis Regionales</h3>
-          <p>Música ranchera y sones tradicionales para serenatas, bodas, fiestas patronales y eventos especiales en todo el municipio de Jilotepec.</p>
-          <a href="https://wa.me/527610000000?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informes%20para%20contratar%20un%20Mariachi%20Local" target="_blank" class="btn-contratar">
+          <span class="music-badge">Mariachi Tradicional</span>
+          <h3>Mariachi Regional</h3>
+          <p>Música ranchera, serenatas y sones tradicionales para todo tipo de eventos sociales, festejos y reuniones en todo el municipio.</p>
+          
+          <a href="https://wa.me/527610000002?text=Hola,%20vi%20su%20contacto%20en%20el%20portal%20de%20Turismo%20Jilotepec%20y%20me%20gustar%C3%ADa%20cotizar%20un%20Mariachi." target="_blank" class="btn-whatsapp-directo">
             <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-            Solicitar Informes
+            Contactar por WhatsApp
           </a>
         </div>
       </article>
 
-      <article class="card" data-galeria="banda">
-        <img src="img/banda.jpg" alt="Banda de Viento de Jilotepec" title="Haz clic para ver más fotografías">
+      <!-- 3. SOLISTAS Y VOCES LOCALES -->
+      <article class="card" data-galeria="solista">
+        <img src="img/solista.jpg" alt="Solistas y Voces de Jilotepec" title="Haz clic para ver la galería de fotos">
         <div class="card-body">
-          <span class="music-badge">Fiesta Patronal</span>
-          <h3>Bandas de Viento</h3>
-          <p>Agrupaciones de metales y percusiones encargadas de alegrar las procesiones, ferias comunales y festejos tradicionales de la región.</p>
-          <a href="https://wa.me/527610000000?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informes%20para%20contratar%20una%20Banda%20de%20Viento" target="_blank" class="btn-contratar">
+          <span class="music-badge">Solistas y Versátil</span>
+          <h3>Solistas y Voces Locales</h3>
+          <p>Cantantes solistas y duetos locales que amenizan eventos con variedad de géneros: baladas, versátil, música romántica y temas populares.</p>
+          
+          <a href="https://wa.me/527610000003?text=Hola,%20vi%20su%20contacto%20en%20el%20portal%20de%20Turismo%20Jilotepec%20y%20me%20gustar%C3%ADa%20solicitar%20informes." target="_blank" class="btn-whatsapp-directo">
             <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-            Solicitar Informes
+            Contactar por WhatsApp
           </a>
         </div>
       </article>
 
-      <article class="card" data-galeria="norteno">
-        <img src="img/norteno.jpg" alt="Grupo Norteño de Jilotepec" title="Haz clic para ver más fotografías">
-        <div class="card-body">
-          <span class="music-badge">Música Popular</span>
-          <h3>Grupos Norteños y Tropicales</h3>
-          <p>Acordeón, bajo sexto y ritmo bailable para amenizar festejos familiares, rodeos y jaripeos tradicionales de Jilotepec.</p>
-          <a href="https://wa.me/527610000000?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informes%20para%20contratar%20un%20Grupo%20Norte%C3%B1o" target="_blank" class="btn-contratar">
-            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-            Solicitar Informes
-          </a>
-        </div>
-      </article>
     </div>
   </section>
 
@@ -339,19 +349,17 @@
       ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
     });
 
-    // Galerías de fotos locales en la carpeta img/
     const galerias = {
+      tremendos: [
+        { url: 'img/tremendos.jpg', titulo: 'Adolfo y sus Tremendos de Saltillo Jilotepec' },
+        { url: 'img/tremendos 2.jpg', titulo: 'Música Norteña y Corridos en Fiestas Regionales' }
+      ],
       mariachi: [
-        { url: 'img/mariachi.jpg', titulo: 'Mariachis Tradicionales de Jilotepec' },
-        { url: 'img/mariachi2.jpg', titulo: 'Presentaciones en Festivales y Festejos Locales' }
+        { url: 'img/mariachi.jpg', titulo: 'Mariachi Tradicional de Jilotepec' },
+        { url: 'img/mariachi 2.jpg', titulo: 'Presentaciones y Serenatas en Jilotepec' }
       ],
-      banda: [
-        { url: 'img/banda.jpg', titulo: 'Banda de Viento Tradicional' },
-        { url: 'img/banda2.jpg', titulo: 'Acompañamiento en Procesiones y Ferias Patronales' }
-      ],
-      norteno: [
-        { url: 'img/norteno.jpg', titulo: 'Grupo Norteño y Tropical de la Región' },
-        { url: 'img/norteno2.jpg', titulo: 'Música en Vivo para Fiestas Populares' }
+      solista: [
+        { url: 'img/solista.jpg', titulo: 'Solistas y Voces de Jilotepec' }
       ]
     };
 
@@ -387,8 +395,8 @@
 
     document.querySelectorAll('.card').forEach(card => {
       card.addEventListener('click', function(e) {
-        if (e.target.closest('.btn-contratar')) return; // Evita abrir el modal al dar clic al botón WhatsApp
-        
+        if (e.target.closest('.btn-whatsapp-directo')) return;
+
         const clave = this.getAttribute('data-galeria');
         if (galerias[clave]) {
           galeriaActual = galerias[clave];
