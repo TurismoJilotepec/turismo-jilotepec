@@ -85,6 +85,10 @@
     .card img {
       cursor: pointer;
       transition: transform 0.3s ease, filter 0.3s ease;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      object-position: top center;
     }
 
     .card img:hover {
@@ -100,8 +104,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.88);
-      backdrop-filter: blur(6px);
+      background-color: rgba(0, 0, 0, 0.90);
+      backdrop-filter: blur(8px);
       animation: fadeInModal 0.25s ease-out;
     }
 
@@ -124,7 +128,7 @@
 
     .modal-imagen {
       max-width: 90%;
-      max-height: 82vh;
+      max-height: 85vh;
       border-radius: 8px;
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
       object-fit: contain;
@@ -152,7 +156,7 @@
       transition: color 0.2s ease, transform 0.2s ease;
       line-height: 1;
       z-index: 100000;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.5);
       width: 45px;
       height: 45px;
       border-radius: 50%;
@@ -164,7 +168,7 @@
     .modal-cerrar:hover {
       color: #ff4d4d;
       transform: scale(1.1);
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.8);
     }
   </style>
 </head>
@@ -185,6 +189,7 @@
         <a href="atractivos.html" class="nav-link">Atractivos</a>
         <a href="eventos.html" class="nav-link active">Eventos y Ferias</a>
         <a href="gastronomia.html" class="nav-link">Gastronomía</a>
+        <a href="musica.html" class="nav-link">Música Local</a>
         <a href="contacto.html" class="nav-link">Contacto</a>
       </nav>
 
@@ -210,34 +215,36 @@
     <p class="subtitulo-seccion">¡Prepárate para vivir nuestras tradiciones! Haz clic sobre cualquier afiche para ampliar la información.</p>
 
     <div class="cards-grid">
+      <!-- TARJETA 1: FERIA REGIONAL 2026 -->
       <article class="card">
-        <img src="img/FESTIVAL.jpg" alt="5° Festival del Maíz Jilotepec 2026 - Alameda Central" title="Clic para ampliar imagen">
+        <img src="img/Cartelera de Feria 2026.jpeg" alt="Feria Regional Jilotepec 2026 - Teatro del Pueblo" title="Haz clic para ampliar la cartelera completa">
         <div class="card-body">
-          <span class="event-badge badge-destacado">Destacado</span>
+          <span class="event-badge badge-destacado">Gran Fiesta Regional</span>
+          <div class="event-date-box">
+            📅 Del 01 al 08 de Diciembre de 2026
+          </div>
+          <h3>Feria Regional Jilotepec 2026</h3>
+          <p><strong>"Eventos 100% Familiares • Entrada Gratuita"</strong>. La máxima fiesta de nuestro Pueblo Mágico con la presentación de Calle 24, CID, Rayito Colombiano, Liberación, Herencia de Grandes, Bohemio, Pesado y Remmy Valenzuela.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Recinto+Ferial+Jilotepec+Estado+de+Mexico" target="_blank" rel="noopener noreferrer" class="btn-maps">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Recinto Ferial Jilotepec
+          </a>
+        </div>
+      </article>
+
+      <!-- TARJETA 2: FESTIVAL DEL MAÍZ 2026 -->
+      <article class="card">
+        <img src="img/FESTIVAL.jpg" alt="5° Festival del Maíz Jilotepec 2026 - Alameda Central" title="Haz clic para ampliar imagen">
+        <div class="card-body">
+          <span class="event-badge badge-proximo">Tradición y Gastronomía</span>
           <div class="event-date-box">
             📅 26 de Septiembre de 2026
           </div>
           <h3>5° Festival del Maíz</h3>
           <p><strong>"El Maíz como identidad milenaria"</strong>. Disfruta de muestra gastronómica artesanal, productos derivados de la milpa, artesanías locales y presentaciones de música en vivo en un ambiente 100% familiar.</p>
-          <a href="https://www.google.com/maps/place/Alameda+Municipal/@19.9501273,-99.537828,17z/data=!4m10!1m2!2m1!1sAlameda+Central+Jilotepec!3m6!1s0x85d237fe28724073:0x9ddf7e925fa9b151!8m2!3d19.9501279!4d-99.5333209!15sChlBbGFtZWRhIENlbnRyYWwgSmlsb3RlcGVjkgEEcGFya-ABAA!16s%2Fg%2F11jmxg2rm0?entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-maps">
+          <a href="https://www.google.com/maps/place/Alameda+Municipal/@19.9501273,-99.537828,17z/data=!4m10!1m2!2m1!1sAlameda+Central+Jilotepec!3m6!1s0x85d237fe28724073:0x9ddf7e925fa9b151!8m2!3d19.9501279!4d-99.5333209!15sChlBbGFtZWRhIENlbnRyYWwgSmlsb3RlcGVjkgEEcGFya-ABAA!16s%2Fg%2F11jmxg2rm0?entry=ttu" target="_blank" rel="noopener noreferrer" class="btn-maps">
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             Alameda Central
-          </a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="img/proximamente.png" alt="Próximamente Cartelera Feria Regional de Jilotepec 2026" title="Clic para ampliar imagen">
-        <div class="card-body">
-          <span class="event-badge badge-proximo">Próximamente</span>
-          <div class="event-date-box">
-            📅 Próxima Publicación 2026
-          </div>
-          <h3>Cartelera de la Feria Regional de Jilotepec</h3>
-          <p>La máxima fiesta de nuestro Pueblo Mágico está por llegar. Espérala muy pronto con sorpresas en el Teatro del Pueblo, exposición ganadera, juegos mecánicos, muestras gastronómicas y pabellón artesanal.</p>
-          <a href="#" class="btn-maps" style="opacity: 0.7; cursor: default;" onclick="return false;">
-            <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/></svg>
-            Cartelera por Anunciar
           </a>
         </div>
       </article>
@@ -251,7 +258,7 @@
 
       <div class="cards-grid">
         <article class="card">
-          <img src="img/festivalglobo.jpg" alt="5° Festival del Globo, la Barbacoa y el Pulque 2026" title="Clic para ampliar imagen">
+          <img src="img/festivalglobo.jpg" alt="5° Festival del Globo, la Barbacoa y el Pulque 2026" title="Haz clic para ampliar imagen">
           <div class="card-body">
             <span class="event-badge badge-pasado">Concluido</span>
             <div class="event-date-box">
@@ -267,7 +274,7 @@
         </article>
 
         <article class="card">
-          <img src="img/cabalgata.jpg" alt="Tradicional Cabalgata de Independencia Jilotepec 2026" title="Clic para ampliar imagen">
+          <img src="img/cabalgata.jpg" alt="Tradicional Cabalgata de Independencia Jilotepec 2026" title="Haz clic para ampliar imagen">
           <div class="card-body">
             <span class="event-badge badge-pasado">Concluido</span>
             <div class="event-date-box">
@@ -283,7 +290,7 @@
         </article>
 
         <article class="card">
-          <img src="img/mundial.jpg" alt="Transmisión del Partido México vs Sudáfrica en Jilotepec 2026" title="Clic para ampliar imagen">
+          <img src="img/mundial.jpg" alt="Transmisión del Partido México vs Sudáfrica en Jilotepec 2026" title="Haz clic para ampliar imagen">
           <div class="card-body">
             <span class="event-badge badge-pasado">Concluido</span>
             <div class="event-date-box">
@@ -325,7 +332,7 @@
           <li><a href="atractivos.html">Atractivos Turísticos</a></li>
           <li><a href="eventos.html">Eventos y Ferias</a></li>
           <li><a href="gastronomia.html">Gastronomía</a></li>
-          <li><a href="musica.html">Musica Local</a></li>
+          <li><a href="musica.html">Música Local</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
