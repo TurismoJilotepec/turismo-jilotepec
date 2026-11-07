@@ -293,6 +293,7 @@
           <li><a href="atractivos.html">Atractivos Turísticos</a></li>
           <li><a href="eventos.html">Eventos y Ferias</a></li>
           <li><a href="gastronomia.html">Gastronomía</a></li>
+          <li><a href="musica.html">Música Local</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
@@ -324,7 +325,6 @@
   </footer>
 
   <script>
-    // 1. HEADER AUTO-OCULTABLE EN SCROLL
     let ultimoScroll = 0;
     const header = document.querySelector('.header');
 
@@ -340,7 +340,6 @@
       ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
     });
 
-    // 2. GALERÍAS 100% LOCALES CON TUS FOTOGRAFÍAS DE LA CARPETA img/
     const galerias = {
       dulces: [
         { url: 'img/dulces.jpg', titulo: 'Jamoncillos de Leche y Dulces Tradicionales de Jilotepec' },
@@ -449,5 +448,6 @@
       }
     });
   </script>
+
 </body>
 </html>
